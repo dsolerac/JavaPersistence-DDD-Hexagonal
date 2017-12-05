@@ -27,12 +27,6 @@ import java.time.LocalDate;
 public class EmployeeServiceTest {
 
 
-//    @Autowired
-//    EmployeeService service;
-
-
-//    private User user2;
-
     @Qualifier("employeeRepositoryImpl")
     @Autowired
     EmployeeRepository employeeRepository;
@@ -41,26 +35,13 @@ public class EmployeeServiceTest {
     public void setUp() throws Exception {
 
 
-//        user = new User(new ShortName("dsolerac"));
-//        user.setName("daniel");
-//        user.setEmail( new EmailAddress("dsolerac@gmail.com"));
-//
-//        user2 = new User(new ShortName("ccarrascom"));
-//        user2.setName("carolina");
-//        user2.setEmail( new EmailAddress("ccarrascom@gmail.com"));
-//
-//        service.createUser(user2);
-//        service.createUser(user);
-
     }
 
     @After
     public void tearDown() throws Exception {
 
     }
-
-
-
+    
 
     @Test
     public void count(){
