@@ -1,0 +1,6 @@
+/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure/src/main/java/es/dsolerac/employees/infrastructure/spring/config/EmployeeConfig.java
+/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure/src/main/java/es/dsolerac/employees/infrastructure/persistence/springData/EmployeeDataRepository.java
+/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure/src/main/java/es/dsolerac/employees/infrastructure/persistence/springData/impl/EmployeeRepositoryImpl.java
+/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure/src/main/java/es/dsolerac/employees/infrastructure/spring/BeanNames.java
+/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure/src/main/java/JPA_XMLConfiguration_QueryDSL_Exporter.java
+/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure/src/main/java/es/dsolerac/employees/infrastructure/spring/config/PersistenceConfig.java

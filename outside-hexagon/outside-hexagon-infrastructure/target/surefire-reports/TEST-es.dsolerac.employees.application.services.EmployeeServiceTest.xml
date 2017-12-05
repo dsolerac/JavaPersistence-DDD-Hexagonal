@@ -1,0 +1,1210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="es.dsolerac.employees.application.services.EmployeeServiceTest" time="0.019" tests="4" errors="1" skipped="3" failures="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/jdk1.8.0/jre/lib/amd64"/>
+    <property name="java.vm.version" value="25.144-b01"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/dsolerac/Proyectos/Employees"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="ES"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/dsolerac/Proyectos/Employees"/>
+    <property name="java.runtime.version" value="1.8.0_144-b01"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/jdk1.8.0/jre/lib/endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="4.10.0-40-generic"/>
+    <property name="user.home" value="/home/dsolerac"/>
+    <property name="user.timezone" value="Europe/Madrid"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="user.name" value="dsolerac"/>
+    <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/usr/lib/jvm/jdk1.8.0/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="es"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_144"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/jdk1.8.0/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/jdk1.8.0/jre/lib/resources.jar:/usr/lib/jvm/jdk1.8.0/jre/lib/rt.jar:/usr/lib/jvm/jdk1.8.0/jre/lib/sunrsasign.jar:/usr/lib/jvm/jdk1.8.0/jre/lib/jsse.jar:/usr/lib/jvm/jdk1.8.0/jre/lib/jce.jar:/usr/lib/jvm/jdk1.8.0/jre/lib/charsets.jar:/usr/lib/jvm/jdk1.8.0/jre/lib/jfr.jar:/usr/lib/jvm/jdk1.8.0/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/usr/share/maven"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase name="count" classname="es.dsolerac.employees.application.services.EmployeeServiceTest" time="0.019">
+    <error message="Could not open JPA EntityManager for transaction; nested exception is java.lang.UnsupportedOperationException: Not supported by BasicDataSource" type="org.springframework.transaction.CannotCreateTransactionException">org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.UnsupportedOperationException: Not supported by BasicDataSource
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:450)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:374)
+	at org.springframework.test.context.transaction.TransactionContext.startTransaction(TransactionContext.java:101)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:192)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:287)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+Caused by: java.lang.UnsupportedOperationException: Not supported by BasicDataSource
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1062)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:35)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:106)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:136)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getConnectionForTransactionManagement(LogicalConnectionManagedImpl.java:254)
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.begin(LogicalConnectionManagedImpl.java:262)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.begin(JdbcResourceLocalTransactionCoordinatorImpl.java:214)
+	at org.hibernate.engine.transaction.internal.TransactionImpl.begin(TransactionImpl.java:56)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.beginTransaction(HibernateJpaDialect.java:164)
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:400)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:374)
+	at org.springframework.test.context.transaction.TransactionContext.startTransaction(TransactionContext.java:101)
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:192)
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:287)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+</error>
+    <system-out><![CDATA[INFO  | 2017-12-05 13:24:54 | [main] support.AbstractTestContextBootstrapper (AbstractTestContextBootstrapper.java:257) - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+INFO  | 2017-12-05 13:24:54 | [main] support.AbstractTestContextBootstrapper (AbstractTestContextBootstrapper.java:206) - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+INFO  | 2017-12-05 13:24:54 | [main] support.AbstractTestContextBootstrapper (AbstractTestContextBootstrapper.java:184) - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@72967906, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5b8dfcc1, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2f9f7dcf, org.springframework.test.context.transaction.TransactionalTestExecutionListener@747ddf94, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@35e2d654]
+INFO  | 2017-12-05 13:24:54 | [main] support.AbstractApplicationContext (AbstractApplicationContext.java:589) - Refreshing org.springframework.context.support.GenericApplicationContext@13c9d689: startup date [Tue Dec 05 13:24:54 CET 2017]; root of context hierarchy
+INFO  | 2017-12-05 13:24:54 | [main] annotation.AutowiredAnnotationBeanPostProcessor (AutowiredAnnotationBeanPostProcessor.java:154) - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+INFO  | 2017-12-05 13:24:54 | [main] support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker (PostProcessorRegistrationDelegate.java:328) - Bean 'es.dsolerac.employees.infrastructure.spring.config.PersistenceConfig' of type [es.dsolerac.employees.infrastructure.spring.config.PersistenceConfig$$EnhancerBySpringCGLIB$$a5f37eaf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+INFO  | 2017-12-05 13:24:55 | [main] jpa.LocalContainerEntityManagerFactoryBean (LocalContainerEntityManagerFactoryBean.java:361) - Building JPA container EntityManagerFactory for persistence unit 'Employees'
+DEBUG | 2017-12-05 13:24:55 | [main] util.LogHelper (LogHelper.java:102) - PersistenceUnitInfo [
+	name: Employees
+	persistence provider classname: org.hibernate.jpa.HibernatePersistenceProvider
+	classloader: sun.misc.Launcher$AppClassLoader@6bc7c054
+	excludeUnlistedClasses: false
+	JTA datasource: null
+	Non JTA datasource: org.apache.commons.dbcp.BasicDataSource@79179359
+	Transaction type: RESOURCE_LOCAL
+	PU root URL: file:/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure/target/classes
+	Shared Cache Mode: UNSPECIFIED
+	Validation Mode: AUTO
+	Jar files URLs []
+	Managed classes names []
+	Mapping files names [
+		es/dsolerac/employees/infrastructure/persistence/jpa/orm-Employee.xml]
+	Properties [
+		hibernate.connection.driver_class: com.mysql.jdbc.Driver
+		hbm2ddl.auto: update
+		hibernate.dialect: org.hibernate.dialect.MySQL57Dialect
+		hibernate.format_sql: true
+		hibernate.connection.username: root
+		hibernate.connection.url: jdbc:mysql://localhost:3306/employees
+		hibernate.show_sql: true
+		hibernate.connection.password: solera
+		hibernate.connection.pool_size: 5]
+DEBUG | 2017-12-05 13:24:55 | [main] internal.IntegratorServiceImpl (IntegratorServiceImpl.java:46) - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+DEBUG | 2017-12-05 13:24:55 | [main] internal.IntegratorServiceImpl (IntegratorServiceImpl.java:46) - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+DEBUG | 2017-12-05 13:24:55 | [main] internal.IntegratorServiceImpl (IntegratorServiceImpl.java:46) - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+DEBUG | 2017-12-05 13:24:55 | [main] internal.IntegratorServiceImpl (IntegratorServiceImpl.java:46) - Adding Integrator [org.hibernate.jpa.event.spi.JpaIntegrator].
+INFO  | 2017-12-05 13:24:55 | [main] hibernate.Version (Version.java:45) - HHH000412: Hibernate Core {5.2.12.Final}
+INFO  | 2017-12-05 13:24:55 | [main] cfg.Environment (Environment.java:213) - HHH000206: hibernate.properties not found
+DEBUG | 2017-12-05 13:24:55 | [main] spi.ServiceBinding (ServiceBinding.java:68) - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+DEBUG | 2017-12-05 13:24:55 | [main] internal.RegionFactoryInitiator (RegionFactoryInitiator.java:75) - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+INFO  | 2017-12-05 13:24:55 | [main] java.JavaReflectionManager (JavaReflectionManager.java:66) - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration boolean -> org.hibernate.type.BooleanType@c65a5ef
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration boolean -> org.hibernate.type.BooleanType@c65a5ef
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@c65a5ef
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@6e46d9f4
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration true_false -> org.hibernate.type.TrueFalseType@55f3c410
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration yes_no -> org.hibernate.type.YesNoType@4a8ab068
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration byte -> org.hibernate.type.ByteType@611f8234
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration byte -> org.hibernate.type.ByteType@611f8234
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@611f8234
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration character -> org.hibernate.type.CharacterType@4089713
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration char -> org.hibernate.type.CharacterType@4089713
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@4089713
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration short -> org.hibernate.type.ShortType@4a067c25
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration short -> org.hibernate.type.ShortType@4a067c25
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@4a067c25
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration integer -> org.hibernate.type.IntegerType@319dead1
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration int -> org.hibernate.type.IntegerType@319dead1
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@319dead1
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration long -> org.hibernate.type.LongType@2f08c4b
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration long -> org.hibernate.type.LongType@2f08c4b
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.lang.Long -> org.hibernate.type.LongType@2f08c4b
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration float -> org.hibernate.type.FloatType@49f5c307
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration float -> org.hibernate.type.FloatType@49f5c307
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@49f5c307
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration double -> org.hibernate.type.DoubleType@50687efb
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration double -> org.hibernate.type.DoubleType@50687efb
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@50687efb
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@12cd9150
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@12cd9150
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@37eeec90
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@37eeec90
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration string -> org.hibernate.type.StringType@d78795
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.lang.String -> org.hibernate.type.StringType@d78795
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@21694e53
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@62417a16
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration url -> org.hibernate.type.UrlType@64712be
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.net.URL -> org.hibernate.type.UrlType@64712be
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration Duration -> org.hibernate.type.DurationType@59fc684e
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@59fc684e
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration Instant -> org.hibernate.type.InstantType@1a69561c
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@1a69561c
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@138fe6ec
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@138fe6ec
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@16423501
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@16423501
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@4e4efc1b
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@4e4efc1b
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@7a56812e
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@7a56812e
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@7e70bd39
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@7e70bd39
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@9f46d94
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@9f46d94
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration date -> org.hibernate.type.DateType@2755d705
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.sql.Date -> org.hibernate.type.DateType@2755d705
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration time -> org.hibernate.type.TimeType@551a20d6
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@551a20d6
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration timestamp -> org.hibernate.type.TimestampType@4cc547a
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@4cc547a
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@4cc547a
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@3591009c
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration calendar -> org.hibernate.type.CalendarType@758f4f03
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@758f4f03
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@758f4f03
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@660e9100
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration locale -> org.hibernate.type.LocaleType@6db66836
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@6db66836
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration currency -> org.hibernate.type.CurrencyType@4eeea57d
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@4eeea57d
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration timezone -> org.hibernate.type.TimeZoneType@5aabbb29
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@5aabbb29
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration class -> org.hibernate.type.ClassType@1ee4730
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@1ee4730
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@9573b3b
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@9573b3b
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@544630b7
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration binary -> org.hibernate.type.BinaryType@1b822fcc
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration byte[] -> org.hibernate.type.BinaryType@1b822fcc
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration [B -> org.hibernate.type.BinaryType@1b822fcc
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@532721fd
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@532721fd
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@532721fd
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration row_version -> org.hibernate.type.RowVersionType@514eedd8
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration image -> org.hibernate.type.ImageType@245a26e1
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration characters -> org.hibernate.type.CharArrayType@7e1a1da6
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration char[] -> org.hibernate.type.CharArrayType@7e1a1da6
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration [C -> org.hibernate.type.CharArrayType@7e1a1da6
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@60094a13
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@60094a13
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@60094a13
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration text -> org.hibernate.type.TextType@3d3f761a
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration ntext -> org.hibernate.type.NTextType@46ab18da
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration blob -> org.hibernate.type.BlobType@7e0aadd0
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@7e0aadd0
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@200a26bc
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration clob -> org.hibernate.type.ClobType@76318a7d
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@76318a7d
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration nclob -> org.hibernate.type.NClobType@5a62b2a4
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@5a62b2a4
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@620aa4ea
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@4d411036
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration serializable -> org.hibernate.type.SerializableType@7d373bcf
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration object -> org.hibernate.type.ObjectType@2f3c6ac4
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@2f3c6ac4
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@d1f74b8
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@41394595
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@3a0807b7
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@21a5fd96
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@5769e7ae
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@5c77053b
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@26b894bd
+DEBUG | 2017-12-05 13:24:55 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@287f94b1
+WARN  | 2017-12-05 13:24:55 | [main] internal.JdbcEnvironmentInitiator (JdbcEnvironmentInitiator.java:132) - HHH000342: Could not obtain connection to query metadata : Not supported by BasicDataSource
+INFO  | 2017-12-05 13:24:55 | [main] dialect.Dialect (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+DEBUG | 2017-12-05 13:24:55 | [main] spi.IdentifierHelperBuilder (IdentifierHelperBuilder.java:191) - IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [MIXED]; that will likely lead to problems in schema update and validation if using quoted identifiers
+INFO  | 2017-12-05 13:24:55 | [main] internal.LobCreatorBuilderImpl (LobCreatorBuilderImpl.java:63) - HHH000422: Disabling contextual LOB creation as connection was null
+DEBUG | 2017-12-05 13:24:55 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+DEBUG | 2017-12-05 13:24:55 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+DEBUG | 2017-12-05 13:24:55 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+DEBUG | 2017-12-05 13:24:55 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+DEBUG | 2017-12-05 13:24:55 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+DEBUG | 2017-12-05 13:24:55 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+DEBUG | 2017-12-05 13:24:55 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+DEBUG | 2017-12-05 13:24:55 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+DEBUG | 2017-12-05 13:24:55 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+DEBUG | 2017-12-05 13:24:55 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+DEBUG | 2017-12-05 13:24:55 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+DEBUG | 2017-12-05 13:24:55 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+DEBUG | 2017-12-05 13:24:55 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+DEBUG | 2017-12-05 13:24:55 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+DEBUG | 2017-12-05 13:24:55 | [main] relational.Namespace (Namespace.java:47) - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+DEBUG | 2017-12-05 13:24:55 | [main] reflection.XMLContext (XMLContext.java:154) - Adding XML overriding information for es.dsolerac.employees.domain.employee.entities.Employee
+DEBUG | 2017-12-05 13:24:55 | [main] reflection.XMLContext (XMLContext.java:179) - Adding XML overriding information for listeners: []
+DEBUG | 2017-12-05 13:24:55 | [main] internal.ClassLoaderAccessImpl (ClassLoaderAccessImpl.java:55) - Not known whether passed class name [es.dsolerac.employees.domain.employee.entities.Employee] is safe
+DEBUG | 2017-12-05 13:24:55 | [main] internal.ClassLoaderAccessImpl (ClassLoaderAccessImpl.java:57) - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : es.dsolerac.employees.domain.employee.entities.Employee
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.AnnotationBinder (AnnotationBinder.java:511) - Binding entity from annotated class: es.dsolerac.employees.domain.employee.entities.Employee
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Ejb3Column (Ejb3Column.java:213) - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.EntityBinder (EntityBinder.java:419) - Import with entity name employees
+DEBUG | 2017-12-05 13:24:55 | [main] relational.Namespace (Namespace.java:47) - Created database namespace [logicalName=Name{catalog=null, schema=employees}, physicalName=Name{catalog=null, schema=employees}]
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.EntityBinder (EntityBinder.java:695) - Bind entity es.dsolerac.employees.domain.employee.entities.Employee on table employees
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Ejb3Column (Ejb3Column.java:213) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees.employees), mappingColumn=emp_no, insertable=true, updatable=true, unique=false}
+DEBUG | 2017-12-05 13:24:55 | [main] internal.ClassLoaderAccessImpl (ClassLoaderAccessImpl.java:55) - Not known whether passed class name [int] is safe
+DEBUG | 2017-12-05 13:24:55 | [main] internal.ClassLoaderAccessImpl (ClassLoaderAccessImpl.java:57) - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : int
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.PropertyBinder (PropertyBinder.java:174) - MetadataSourceProcessor property id with lazy=false
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.AbstractPropertyHolder (AbstractPropertyHolder.java:95) - Attempting to locate auto-apply AttributeConverter for property [es.dsolerac.employees.domain.employee.entities.Employee:id]
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.SimpleValueBinder (SimpleValueBinder.java:411) - building SimpleValue for id
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.PropertyBinder (PropertyBinder.java:265) - Building property id
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Ejb3Column (Ejb3Column.java:213) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees.employees), mappingColumn=birth_date, insertable=true, updatable=true, unique=false}
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.PropertyBinder (PropertyBinder.java:174) - MetadataSourceProcessor property birthDate with lazy=false
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.AbstractPropertyHolder (AbstractPropertyHolder.java:95) - Attempting to locate auto-apply AttributeConverter for property [es.dsolerac.employees.domain.employee.entities.Employee:birthDate]
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.SimpleValueBinder (SimpleValueBinder.java:411) - building SimpleValue for birthDate
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.PropertyBinder (PropertyBinder.java:265) - Building property birthDate
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Ejb3Column (Ejb3Column.java:213) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees.employees), mappingColumn=first_name, insertable=true, updatable=true, unique=false}
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.PropertyBinder (PropertyBinder.java:174) - MetadataSourceProcessor property firstName with lazy=false
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.AbstractPropertyHolder (AbstractPropertyHolder.java:95) - Attempting to locate auto-apply AttributeConverter for property [es.dsolerac.employees.domain.employee.entities.Employee:firstName]
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.SimpleValueBinder (SimpleValueBinder.java:411) - building SimpleValue for firstName
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.PropertyBinder (PropertyBinder.java:265) - Building property firstName
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Ejb3Column (Ejb3Column.java:213) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees.employees), mappingColumn=gender, insertable=true, updatable=true, unique=false}
+DEBUG | 2017-12-05 13:24:55 | [main] internal.ClassLoaderAccessImpl (ClassLoaderAccessImpl.java:55) - Not known whether passed class name [es.dsolerac.employees.domain.employee.entities.Gender] is safe
+DEBUG | 2017-12-05 13:24:55 | [main] internal.ClassLoaderAccessImpl (ClassLoaderAccessImpl.java:57) - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : es.dsolerac.employees.domain.employee.entities.Gender
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.PropertyBinder (PropertyBinder.java:174) - MetadataSourceProcessor property gender with lazy=false
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.AbstractPropertyHolder (AbstractPropertyHolder.java:95) - Attempting to locate auto-apply AttributeConverter for property [es.dsolerac.employees.domain.employee.entities.Employee:gender]
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.SimpleValueBinder (SimpleValueBinder.java:411) - building SimpleValue for gender
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.PropertyBinder (PropertyBinder.java:265) - Building property gender
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Ejb3Column (Ejb3Column.java:213) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees.employees), mappingColumn=hire_date, insertable=true, updatable=true, unique=false}
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.PropertyBinder (PropertyBinder.java:174) - MetadataSourceProcessor property hireDate with lazy=false
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.AbstractPropertyHolder (AbstractPropertyHolder.java:95) - Attempting to locate auto-apply AttributeConverter for property [es.dsolerac.employees.domain.employee.entities.Employee:hireDate]
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.SimpleValueBinder (SimpleValueBinder.java:411) - building SimpleValue for hireDate
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.PropertyBinder (PropertyBinder.java:265) - Building property hireDate
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Ejb3Column (Ejb3Column.java:213) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees.employees), mappingColumn=last_name, insertable=true, updatable=true, unique=false}
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.PropertyBinder (PropertyBinder.java:174) - MetadataSourceProcessor property lastName with lazy=false
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.AbstractPropertyHolder (AbstractPropertyHolder.java:95) - Attempting to locate auto-apply AttributeConverter for property [es.dsolerac.employees.domain.employee.entities.Employee:lastName]
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.SimpleValueBinder (SimpleValueBinder.java:411) - building SimpleValue for lastName
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.PropertyBinder (PropertyBinder.java:265) - Building property lastName
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.SimpleValueBinder (SimpleValueBinder.java:456) - Starting fillSimpleValue for id
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.SimpleValueBinder (SimpleValueBinder.java:456) - Starting fillSimpleValue for birthDate
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.SimpleValueBinder (SimpleValueBinder.java:456) - Starting fillSimpleValue for firstName
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.SimpleValueBinder (SimpleValueBinder.java:456) - Starting fillSimpleValue for gender
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.SimpleValueBinder (SimpleValueBinder.java:456) - Starting fillSimpleValue for hireDate
+DEBUG | 2017-12-05 13:24:55 | [main] annotations.SimpleValueBinder (SimpleValueBinder.java:456) - Starting fillSimpleValue for lastName
+DEBUG | 2017-12-05 13:24:55 | [main] mapping.PrimaryKey (PrimaryKey.java:35) - Forcing column [emp_no] to be non-null as it is part of the primary key for table [employees]
+DEBUG | 2017-12-05 13:24:55 | [main] internal.SessionFactoryImpl (SessionFactoryImpl.java:200) - Building session factory
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:69) - SessionFactory name : null
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:70) - Automatic flush during beforeCompletion(): enabled
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:71) - Automatic session close at end of transaction: disabled
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:73) - Statistics: disabled
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:75) - Deleted entity synthetic identifier rollback: disabled
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:76) - Default entity-mode: pojo
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:77) - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:78) - Allow initialization of lazy state outside session : disabled
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:80) - Using BatchFetchStyle : LEGACY
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:81) - Default batch fetch size: -1
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:82) - Maximum outer join fetch depth: 2
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:83) - Default null ordering: NONE
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:84) - Order SQL updates by primary key: disabled
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:85) - Order SQL inserts for batching: disabled
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:87) - multi-tenancy strategy : NONE
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:89) - JTA Track by Thread: enabled
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:91) - Query language substitutions: {}
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:92) - JPA query language strict compliance: disabled
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:93) - Named query checking : enabled
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:95) - Second-level cache: enabled
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:96) - Second-level query cache: disabled
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:97) - Second-level query cache factory: org.hibernate.cache.internal.StandardQueryCacheFactory@43cf6ea3
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:98) - Second-level cache region prefix: null
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:99) - Optimize second-level cache for minimal puts: disabled
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:100) - Structured second-level cache entries: disabled
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:101) - Second-level cache direct-reference entries: disabled
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:102) - Automatic eviction of collection cache: disabled
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:104) - JDBC batch size: 0
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:105) - JDBC batch updates for versioned data: enabled
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:106) - Scrollable result sets: disabled
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:107) - Wrap result sets: disabled
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:108) - JDBC3 getGeneratedKeys(): disabled
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:109) - JDBC result set fetch size: null
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:110) - Connection release mode: ON_CLOSE
+DEBUG | 2017-12-05 13:24:55 | [main] cfg.Settings (Settings.java:111) - Generate SQL with comments: disabled
+DEBUG | 2017-12-05 13:24:55 | [main] internal.SessionFactoryImpl (SessionFactoryImpl.java:258) - Session factory constructed with filter configurations : {}
+DEBUG | 2017-12-05 13:24:55 | [main] internal.SessionFactoryImpl (SessionFactoryImpl.java:259) - Instantiating session factory with properties: {sun.desktop=gnome, hibernate.format_sql=true, awt.toolkit=sun.awt.X11.XToolkit, file.encoding.pkg=sun.io, java.specification.version=1.8, sun.cpu.isalist=, hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, sun.jnu.encoding=UTF-8, hibernate.dialect=org.hibernate.dialect.MySQL5Dialect, java.class.path=/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure/target/test-classes:/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure/target/classes:/home/dsolerac/Proyectos/Employees/domain/target/domain-1.0-SNAPSHOT.jar:/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-application/target/outside-hexagon-application-1.0-SNAPSHOT.jar:/home/dsolerac/.m2/repository/org/springframework/spring-core/5.0.2.RELEASE/spring-core-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-jcl/5.0.2.RELEASE/spring-jcl-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-beans/5.0.2.RELEASE/spring-beans-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-context/5.0.2.RELEASE/spring-context-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-aop/5.0.2.RELEASE/spring-aop-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-expression/5.0.2.RELEASE/spring-expression-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-orm/5.0.2.RELEASE/spring-orm-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-tx/5.0.2.RELEASE/spring-tx-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-jdbc/5.0.2.RELEASE/spring-jdbc-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/mysql/mysql-connector-java/5.1.39/mysql-connector-java-5.1.39.jar:/home/dsolerac/.m2/repository/org/hibernate/hibernate-core/5.2.12.Final/hibernate-core-5.2.12.Final.jar:/home/dsolerac/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar:/home/dsolerac/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar:/home/dsolerac/.m2/repository/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar:/home/dsolerac/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/home/dsolerac/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.1.Final/jboss-transaction-api_1.2_spec-1.0.1.Final.jar:/home/dsolerac/.m2/repository/org/jboss/jandex/2.0.3.Final/jandex-2.0.3.Final.jar:/home/dsolerac/.m2/repository/com/fasterxml/classmate/1.3.0/classmate-1.3.0.jar:/home/dsolerac/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/home/dsolerac/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.0.1.Final/hibernate-commons-annotations-5.0.1.Final.jar:/home/dsolerac/.m2/repository/org/hibernate/hibernate-entitymanager/5.2.12.Final/hibernate-entitymanager-5.2.12.Final.jar:/home/dsolerac/.m2/repository/net/bytebuddy/byte-buddy/1.6.14/byte-buddy-1.6.14.jar:/home/dsolerac/.m2/repository/commons-dbcp/commons-dbcp/1.4/commons-dbcp-1.4.jar:/home/dsolerac/.m2/repository/commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.jar:/home/dsolerac/.m2/repository/org/springframework/data/spring-data-jpa/2.0.2.RELEASE/spring-data-jpa-2.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/data/spring-data-commons/2.0.2.RELEASE/spring-data-commons-2.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/aspectj/aspectjrt/1.8.12/aspectjrt-1.8.12.jar:/home/dsolerac/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/dsolerac/.m2/repository/com/querydsl/querydsl-core/4.1.4/querydsl-core-4.1.4.jar:/home/dsolerac/.m2/repository/com/google/guava/guava/18.0/guava-18.0.jar:/home/dsolerac/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/home/dsolerac/.m2/repository/com/mysema/commons/mysema-commons-lang/0.2.4/mysema-commons-lang-0.2.4.jar:/home/dsolerac/.m2/repository/com/infradna/tool/bridge-method-annotation/1.13/bridge-method-annotation-1.13.jar:/home/dsolerac/.m2/repository/com/querydsl/querydsl-apt/4.1.4/querydsl-apt-4.1.4.jar:/home/dsolerac/.m2/repository/javax/jdo/jdo-api/3.0.1/jdo-api-3.0.1.jar:/home/dsolerac/.m2/repository/javax/transaction/jta/1.1/jta-1.1.jar:/home/dsolerac/.m2/repository/com/querydsl/querydsl-jpa/4.1.4/querydsl-jpa-4.1.4.jar:/home/dsolerac/.m2/repository/com/querydsl/querydsl-codegen/4.1.4/querydsl-codegen-4.1.4.jar:/home/dsolerac/.m2/repository/com/mysema/codegen/codegen/0.6.8/codegen-0.6.8.jar:/home/dsolerac/.m2/repository/org/eclipse/jdt/core/compiler/ecj/4.3.1/ecj-4.3.1.jar:/home/dsolerac/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/home/dsolerac/.m2/repository/org/reflections/reflections/0.9.9/reflections-0.9.9.jar:/home/dsolerac/.m2/repository/com/google/code/findbugs/annotations/2.0.1/annotations-2.0.1.jar:/home/dsolerac/.m2/repository/com/querydsl/querydsl-jpa-codegen/4.1.4/querydsl-jpa-codegen-4.1.4.jar:/home/dsolerac/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.0.Final/hibernate-jpa-2.0-api-1.0.0.Final.jar:/home/dsolerac/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/dsolerac/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/dsolerac/.m2/repository/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar:/home/dsolerac/.m2/repository/org/springframework/spring-test/5.0.2.RELEASE/spring-test-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/apache/httpcomponents/httpclient/4.3.6/httpclient-4.3.6.jar:/home/dsolerac/.m2/repository/org/apache/httpcomponents/httpcore/4.3.3/httpcore-4.3.3.jar:/home/dsolerac/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/home/dsolerac/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar:/home/dsolerac/.m2/repository/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19.jar:/home/dsolerac/.m2/repository/org/objenesis/objenesis/2.1/objenesis-2.1.jar:/home/dsolerac/.m2/repository/org/apache/logging/log4j/log4j-api/2.8.2/log4j-api-2.8.2.jar:/home/dsolerac/.m2/repository/org/apache/logging/log4j/log4j-core/2.8.2/log4j-core-2.8.2.jar:, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, hbm2ddl.auto=update, java.vendor.url=http://java.oracle.com/, user.timezone=Europe/Madrid, os.name=Linux, java.vm.specification.version=1.8, javax.persistence.validation.mode=AUTO, sun.java.launcher=SUN_STANDARD, user.country=ES, sun.boot.library.path=/usr/lib/jvm/jdk1.8.0/jre/lib/amd64, sun.java.command=/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure/target/surefire/surefirebooter5237540233607883385.jar /home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure/target/surefire/surefire5286922205254440871tmp /home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure/target/surefire/surefire_08000843437868112557tmp, javax.persistence.sharedCache.mode=UNSPECIFIED, surefire.test.class.path=/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure/target/test-classes:/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure/target/classes:/home/dsolerac/Proyectos/Employees/domain/target/domain-1.0-SNAPSHOT.jar:/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-application/target/outside-hexagon-application-1.0-SNAPSHOT.jar:/home/dsolerac/.m2/repository/org/springframework/spring-core/5.0.2.RELEASE/spring-core-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-jcl/5.0.2.RELEASE/spring-jcl-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-beans/5.0.2.RELEASE/spring-beans-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-context/5.0.2.RELEASE/spring-context-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-aop/5.0.2.RELEASE/spring-aop-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-expression/5.0.2.RELEASE/spring-expression-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-orm/5.0.2.RELEASE/spring-orm-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-tx/5.0.2.RELEASE/spring-tx-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-jdbc/5.0.2.RELEASE/spring-jdbc-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/mysql/mysql-connector-java/5.1.39/mysql-connector-java-5.1.39.jar:/home/dsolerac/.m2/repository/org/hibernate/hibernate-core/5.2.12.Final/hibernate-core-5.2.12.Final.jar:/home/dsolerac/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar:/home/dsolerac/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar:/home/dsolerac/.m2/repository/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar:/home/dsolerac/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/home/dsolerac/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.1.Final/jboss-transaction-api_1.2_spec-1.0.1.Final.jar:/home/dsolerac/.m2/repository/org/jboss/jandex/2.0.3.Final/jandex-2.0.3.Final.jar:/home/dsolerac/.m2/repository/com/fasterxml/classmate/1.3.0/classmate-1.3.0.jar:/home/dsolerac/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/home/dsolerac/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.0.1.Final/hibernate-commons-annotations-5.0.1.Final.jar:/home/dsolerac/.m2/repository/org/hibernate/hibernate-entitymanager/5.2.12.Final/hibernate-entitymanager-5.2.12.Final.jar:/home/dsolerac/.m2/repository/net/bytebuddy/byte-buddy/1.6.14/byte-buddy-1.6.14.jar:/home/dsolerac/.m2/repository/commons-dbcp/commons-dbcp/1.4/commons-dbcp-1.4.jar:/home/dsolerac/.m2/repository/commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.jar:/home/dsolerac/.m2/repository/org/springframework/data/spring-data-jpa/2.0.2.RELEASE/spring-data-jpa-2.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/data/spring-data-commons/2.0.2.RELEASE/spring-data-commons-2.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/aspectj/aspectjrt/1.8.12/aspectjrt-1.8.12.jar:/home/dsolerac/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/dsolerac/.m2/repository/com/querydsl/querydsl-core/4.1.4/querydsl-core-4.1.4.jar:/home/dsolerac/.m2/repository/com/google/guava/guava/18.0/guava-18.0.jar:/home/dsolerac/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/home/dsolerac/.m2/repository/com/mysema/commons/mysema-commons-lang/0.2.4/mysema-commons-lang-0.2.4.jar:/home/dsolerac/.m2/repository/com/infradna/tool/bridge-method-annotation/1.13/bridge-method-annotation-1.13.jar:/home/dsolerac/.m2/repository/com/querydsl/querydsl-apt/4.1.4/querydsl-apt-4.1.4.jar:/home/dsolerac/.m2/repository/javax/jdo/jdo-api/3.0.1/jdo-api-3.0.1.jar:/home/dsolerac/.m2/repository/javax/transaction/jta/1.1/jta-1.1.jar:/home/dsolerac/.m2/repository/com/querydsl/querydsl-jpa/4.1.4/querydsl-jpa-4.1.4.jar:/home/dsolerac/.m2/repository/com/querydsl/querydsl-codegen/4.1.4/querydsl-codegen-4.1.4.jar:/home/dsolerac/.m2/repository/com/mysema/codegen/codegen/0.6.8/codegen-0.6.8.jar:/home/dsolerac/.m2/repository/org/eclipse/jdt/core/compiler/ecj/4.3.1/ecj-4.3.1.jar:/home/dsolerac/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/home/dsolerac/.m2/repository/org/reflections/reflections/0.9.9/reflections-0.9.9.jar:/home/dsolerac/.m2/repository/com/google/code/findbugs/annotations/2.0.1/annotations-2.0.1.jar:/home/dsolerac/.m2/repository/com/querydsl/querydsl-jpa-codegen/4.1.4/querydsl-jpa-codegen-4.1.4.jar:/home/dsolerac/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.0.Final/hibernate-jpa-2.0-api-1.0.0.Final.jar:/home/dsolerac/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/dsolerac/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/dsolerac/.m2/repository/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar:/home/dsolerac/.m2/repository/org/springframework/spring-test/5.0.2.RELEASE/spring-test-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/apache/httpcomponents/httpclient/4.3.6/httpclient-4.3.6.jar:/home/dsolerac/.m2/repository/org/apache/httpcomponents/httpcore/4.3.3/httpcore-4.3.3.jar:/home/dsolerac/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/home/dsolerac/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar:/home/dsolerac/.m2/repository/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19.jar:/home/dsolerac/.m2/repository/org/objenesis/objenesis/2.1/objenesis-2.1.jar:/home/dsolerac/.m2/repository/org/apache/logging/log4j/log4j-api/2.8.2/log4j-api-2.8.2.jar:/home/dsolerac/.m2/repository/org/apache/logging/log4j/log4j-core/2.8.2/log4j-core-2.8.2.jar:, sun.cpu.endian=little, user.home=/home/dsolerac, user.language=es, java.specification.vendor=Oracle Corporation, java.home=/usr/lib/jvm/jdk1.8.0/jre, file.separator=/, basedir=/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, hibernate.transaction.coordinator_class=class org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, surefire.real.class.path=/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure/target/surefire/surefirebooter5237540233607883385.jar, sun.boot.class.path=/usr/lib/jvm/jdk1.8.0/jre/lib/resources.jar:/usr/lib/jvm/jdk1.8.0/jre/lib/rt.jar:/usr/lib/jvm/jdk1.8.0/jre/lib/sunrsasign.jar:/usr/lib/jvm/jdk1.8.0/jre/lib/jsse.jar:/usr/lib/jvm/jdk1.8.0/jre/lib/jce.jar:/usr/lib/jvm/jdk1.8.0/jre/lib/charsets.jar:/usr/lib/jvm/jdk1.8.0/jre/lib/jfr.jar:/usr/lib/jvm/jdk1.8.0/jre/classes, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=1.8.0_144-b01, user.name=dsolerac, path.separator=:, hibernate.connection.username=root, os.version=4.10.0-40-generic, java.endorsed.dirs=/usr/lib/jvm/jdk1.8.0/jre/lib/endorsed, java.runtime.name=Java(TM) SE Runtime Environment, hibernate.connection.url=jdbc:mysql://localhost:3306/employees, hibernate.ejb.persistenceUnitName=Employees, file.encoding=UTF-8, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, hibernate.show_sql=true, localRepository=/home/dsolerac/.m2/repository, hibernate.connection.driver_class=com.mysql.jdbc.Driver, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, java.io.tmpdir=/tmp, java.version=1.8.0_144, user.dir=/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure, os.arch=amd64, java.vm.specification.name=Java Virtual Machine Specification, hibernate.connection.password=****, java.awt.printerjob=sun.print.PSPrinterJob, sun.os.patch.level=unknown, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@682bd3c4, java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib, java.vendor=Oracle Corporation, java.vm.info=mixed mode, java.vm.version=25.144-b01, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.datasource=org.apache.commons.dbcp.BasicDataSource@79179359, sun.io.unicode.encoding=UnicodeLittle, java.ext.dirs=/usr/lib/jvm/jdk1.8.0/jre/lib/ext:/usr/java/packages/lib/ext, hibernate.connection.pool_size=5, java.class.version=52.0}
+DEBUG | 2017-12-05 13:24:55 | [main] spi.JaccIntegrator (JaccIntegrator.java:80) - Skipping JACC integration as it was not enabled
+DEBUG | 2017-12-05 13:24:55 | [main] spi.CascadeStyles (CascadeStyles.java:268) - External cascade style registration [persist : STYLE_PERSIST_SKIPLAZY] overrode base registration [STYLE_PERSIST]
+DEBUG | 2017-12-05 13:24:56 | [main] internal.SessionFactoryImpl (SessionFactoryImpl.java:298) - Instantiated session factory
+DEBUG | 2017-12-05 13:24:56 | [main] internal.ClassLoaderAccessImpl (ClassLoaderAccessImpl.java:55) - Not known whether passed class name [es.dsolerac.employees.domain.employee.entities.Employee] is safe
+DEBUG | 2017-12-05 13:24:56 | [main] internal.ClassLoaderAccessImpl (ClassLoaderAccessImpl.java:57) - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : es.dsolerac.employees.domain.employee.entities.Employee
+DEBUG | 2017-12-05 13:24:56 | [main] internal.ClassLoaderAccessImpl (ClassLoaderAccessImpl.java:55) - Not known whether passed class name [es.dsolerac.employees.domain.employee.entities.Employee] is safe
+DEBUG | 2017-12-05 13:24:56 | [main] internal.ClassLoaderAccessImpl (ClassLoaderAccessImpl.java:57) - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : es.dsolerac.employees.domain.employee.entities.Employee
+DEBUG | 2017-12-05 13:24:56 | [main] entity.AbstractEntityPersister (AbstractEntityPersister.java:3608) - Static SQL for entity: es.dsolerac.employees.domain.employee.entities.Employee
+DEBUG | 2017-12-05 13:24:56 | [main] entity.AbstractEntityPersister (AbstractEntityPersister.java:3613) -  Version select: select emp_no from employees.employees where emp_no =?
+DEBUG | 2017-12-05 13:24:56 | [main] entity.AbstractEntityPersister (AbstractEntityPersister.java:3616) -  Snapshot select: select employee_.emp_no, employee_.birth_date as birth_da2_0_, employee_.first_name as first_na3_0_, employee_.gender as gender4_0_, employee_.hire_date as hire_dat5_0_, employee_.last_name as last_nam6_0_ from employees.employees employee_ where employee_.emp_no=?
+DEBUG | 2017-12-05 13:24:56 | [main] logging.DelegatingBasicLogger (DelegatingBasicLogger.java:394) -  Insert 0: insert into employees.employees (birth_date, first_name, gender, hire_date, last_name, emp_no) values (?, ?, ?, ?, ?, ?)
+DEBUG | 2017-12-05 13:24:56 | [main] logging.DelegatingBasicLogger (DelegatingBasicLogger.java:394) -  Update 0: update employees.employees set birth_date=?, first_name=?, gender=?, hire_date=?, last_name=? where emp_no=?
+DEBUG | 2017-12-05 13:24:56 | [main] logging.DelegatingBasicLogger (DelegatingBasicLogger.java:394) -  Delete 0: delete from employees.employees where emp_no=?
+DEBUG | 2017-12-05 13:24:56 | [main] spaces.QuerySpacesImpl (QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@69da0b12]
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : firstName
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : lastName
+DEBUG | 2017-12-05 13:24:56 | [main] internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:150) - Building LoadPlan...
+DEBUG | 2017-12-05 13:24:56 | [main] internal.LoadQueryJoinAndFetchProcessor (LoadQueryJoinAndFetchProcessor.java:101) - processing queryspace <gen:0>
+DEBUG | 2017-12-05 13:24:56 | [main] spi.LoadPlanTreePrinter (LoadPlanTreePrinter.java:55) - LoadPlan(entity=es.dsolerac.employees.domain.employee.entities.Employee)
+    - Returns
+       - EntityReturnImpl(entity=es.dsolerac.employees.domain.employee.entities.Employee, querySpaceUid=<gen:0>, path=es.dsolerac.employees.domain.employee.entities.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=es.dsolerac.employees.domain.employee.entities.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {emp_no1_0_0_}
+
+DEBUG | 2017-12-05 13:24:56 | [main] plan.EntityLoader (EntityLoader.java:115) - Static select for entity es.dsolerac.employees.domain.employee.entities.Employee [NONE]: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=?
+DEBUG | 2017-12-05 13:24:56 | [main] spaces.QuerySpacesImpl (QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@38eb2c50]
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : firstName
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : lastName
+DEBUG | 2017-12-05 13:24:56 | [main] internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:150) - Building LoadPlan...
+DEBUG | 2017-12-05 13:24:56 | [main] internal.LoadQueryJoinAndFetchProcessor (LoadQueryJoinAndFetchProcessor.java:101) - processing queryspace <gen:0>
+DEBUG | 2017-12-05 13:24:56 | [main] spi.LoadPlanTreePrinter (LoadPlanTreePrinter.java:55) - LoadPlan(entity=es.dsolerac.employees.domain.employee.entities.Employee)
+    - Returns
+       - EntityReturnImpl(entity=es.dsolerac.employees.domain.employee.entities.Employee, querySpaceUid=<gen:0>, path=es.dsolerac.employees.domain.employee.entities.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=es.dsolerac.employees.domain.employee.entities.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {emp_no1_0_0_}
+
+DEBUG | 2017-12-05 13:24:56 | [main] plan.EntityLoader (EntityLoader.java:115) - Static select for entity es.dsolerac.employees.domain.employee.entities.Employee [READ]: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=?
+DEBUG | 2017-12-05 13:24:56 | [main] spaces.QuerySpacesImpl (QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@21422231]
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : firstName
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : lastName
+DEBUG | 2017-12-05 13:24:56 | [main] internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:150) - Building LoadPlan...
+DEBUG | 2017-12-05 13:24:56 | [main] internal.LoadQueryJoinAndFetchProcessor (LoadQueryJoinAndFetchProcessor.java:101) - processing queryspace <gen:0>
+DEBUG | 2017-12-05 13:24:56 | [main] spi.LoadPlanTreePrinter (LoadPlanTreePrinter.java:55) - LoadPlan(entity=es.dsolerac.employees.domain.employee.entities.Employee)
+    - Returns
+       - EntityReturnImpl(entity=es.dsolerac.employees.domain.employee.entities.Employee, querySpaceUid=<gen:0>, path=es.dsolerac.employees.domain.employee.entities.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=es.dsolerac.employees.domain.employee.entities.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {emp_no1_0_0_}
+
+DEBUG | 2017-12-05 13:24:56 | [main] plan.EntityLoader (EntityLoader.java:115) - Static select for entity es.dsolerac.employees.domain.employee.entities.Employee [UPGRADE]: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=? for update
+DEBUG | 2017-12-05 13:24:56 | [main] spaces.QuerySpacesImpl (QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7186333e]
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : firstName
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : lastName
+DEBUG | 2017-12-05 13:24:56 | [main] internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:150) - Building LoadPlan...
+DEBUG | 2017-12-05 13:24:56 | [main] internal.LoadQueryJoinAndFetchProcessor (LoadQueryJoinAndFetchProcessor.java:101) - processing queryspace <gen:0>
+DEBUG | 2017-12-05 13:24:56 | [main] spi.LoadPlanTreePrinter (LoadPlanTreePrinter.java:55) - LoadPlan(entity=es.dsolerac.employees.domain.employee.entities.Employee)
+    - Returns
+       - EntityReturnImpl(entity=es.dsolerac.employees.domain.employee.entities.Employee, querySpaceUid=<gen:0>, path=es.dsolerac.employees.domain.employee.entities.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=es.dsolerac.employees.domain.employee.entities.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {emp_no1_0_0_}
+
+DEBUG | 2017-12-05 13:24:56 | [main] plan.EntityLoader (EntityLoader.java:115) - Static select for entity es.dsolerac.employees.domain.employee.entities.Employee [UPGRADE_NOWAIT]: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=? for update
+DEBUG | 2017-12-05 13:24:56 | [main] spaces.QuerySpacesImpl (QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@36f1046f]
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : firstName
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : lastName
+DEBUG | 2017-12-05 13:24:56 | [main] internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:150) - Building LoadPlan...
+DEBUG | 2017-12-05 13:24:56 | [main] internal.LoadQueryJoinAndFetchProcessor (LoadQueryJoinAndFetchProcessor.java:101) - processing queryspace <gen:0>
+DEBUG | 2017-12-05 13:24:56 | [main] spi.LoadPlanTreePrinter (LoadPlanTreePrinter.java:55) - LoadPlan(entity=es.dsolerac.employees.domain.employee.entities.Employee)
+    - Returns
+       - EntityReturnImpl(entity=es.dsolerac.employees.domain.employee.entities.Employee, querySpaceUid=<gen:0>, path=es.dsolerac.employees.domain.employee.entities.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=es.dsolerac.employees.domain.employee.entities.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {emp_no1_0_0_}
+
+DEBUG | 2017-12-05 13:24:56 | [main] plan.EntityLoader (EntityLoader.java:115) - Static select for entity es.dsolerac.employees.domain.employee.entities.Employee [UPGRADE_SKIPLOCKED]: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=? for update
+DEBUG | 2017-12-05 13:24:56 | [main] spaces.QuerySpacesImpl (QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1686f0b4]
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : firstName
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : lastName
+DEBUG | 2017-12-05 13:24:56 | [main] internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:150) - Building LoadPlan...
+DEBUG | 2017-12-05 13:24:56 | [main] internal.LoadQueryJoinAndFetchProcessor (LoadQueryJoinAndFetchProcessor.java:101) - processing queryspace <gen:0>
+DEBUG | 2017-12-05 13:24:56 | [main] spi.LoadPlanTreePrinter (LoadPlanTreePrinter.java:55) - LoadPlan(entity=es.dsolerac.employees.domain.employee.entities.Employee)
+    - Returns
+       - EntityReturnImpl(entity=es.dsolerac.employees.domain.employee.entities.Employee, querySpaceUid=<gen:0>, path=es.dsolerac.employees.domain.employee.entities.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=es.dsolerac.employees.domain.employee.entities.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {emp_no1_0_0_}
+
+DEBUG | 2017-12-05 13:24:56 | [main] plan.EntityLoader (EntityLoader.java:115) - Static select for entity es.dsolerac.employees.domain.employee.entities.Employee [FORCE]: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=? for update
+DEBUG | 2017-12-05 13:24:56 | [main] spaces.QuerySpacesImpl (QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3900fa71]
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : firstName
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : lastName
+DEBUG | 2017-12-05 13:24:56 | [main] internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:150) - Building LoadPlan...
+DEBUG | 2017-12-05 13:24:56 | [main] internal.LoadQueryJoinAndFetchProcessor (LoadQueryJoinAndFetchProcessor.java:101) - processing queryspace <gen:0>
+DEBUG | 2017-12-05 13:24:56 | [main] spi.LoadPlanTreePrinter (LoadPlanTreePrinter.java:55) - LoadPlan(entity=es.dsolerac.employees.domain.employee.entities.Employee)
+    - Returns
+       - EntityReturnImpl(entity=es.dsolerac.employees.domain.employee.entities.Employee, querySpaceUid=<gen:0>, path=es.dsolerac.employees.domain.employee.entities.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=es.dsolerac.employees.domain.employee.entities.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {emp_no1_0_0_}
+
+DEBUG | 2017-12-05 13:24:56 | [main] plan.EntityLoader (EntityLoader.java:115) - Static select for entity es.dsolerac.employees.domain.employee.entities.Employee [PESSIMISTIC_READ]: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=? lock in share mode
+DEBUG | 2017-12-05 13:24:56 | [main] spaces.QuerySpacesImpl (QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7d0614f]
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : firstName
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : lastName
+DEBUG | 2017-12-05 13:24:56 | [main] internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:150) - Building LoadPlan...
+DEBUG | 2017-12-05 13:24:56 | [main] internal.LoadQueryJoinAndFetchProcessor (LoadQueryJoinAndFetchProcessor.java:101) - processing queryspace <gen:0>
+DEBUG | 2017-12-05 13:24:56 | [main] spi.LoadPlanTreePrinter (LoadPlanTreePrinter.java:55) - LoadPlan(entity=es.dsolerac.employees.domain.employee.entities.Employee)
+    - Returns
+       - EntityReturnImpl(entity=es.dsolerac.employees.domain.employee.entities.Employee, querySpaceUid=<gen:0>, path=es.dsolerac.employees.domain.employee.entities.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=es.dsolerac.employees.domain.employee.entities.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {emp_no1_0_0_}
+
+DEBUG | 2017-12-05 13:24:56 | [main] plan.EntityLoader (EntityLoader.java:115) - Static select for entity es.dsolerac.employees.domain.employee.entities.Employee [PESSIMISTIC_WRITE]: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=? for update
+DEBUG | 2017-12-05 13:24:56 | [main] spaces.QuerySpacesImpl (QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5c10285a]
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : firstName
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : lastName
+DEBUG | 2017-12-05 13:24:56 | [main] internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:150) - Building LoadPlan...
+DEBUG | 2017-12-05 13:24:56 | [main] internal.LoadQueryJoinAndFetchProcessor (LoadQueryJoinAndFetchProcessor.java:101) - processing queryspace <gen:0>
+DEBUG | 2017-12-05 13:24:56 | [main] spi.LoadPlanTreePrinter (LoadPlanTreePrinter.java:55) - LoadPlan(entity=es.dsolerac.employees.domain.employee.entities.Employee)
+    - Returns
+       - EntityReturnImpl(entity=es.dsolerac.employees.domain.employee.entities.Employee, querySpaceUid=<gen:0>, path=es.dsolerac.employees.domain.employee.entities.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=es.dsolerac.employees.domain.employee.entities.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {emp_no1_0_0_}
+
+DEBUG | 2017-12-05 13:24:56 | [main] plan.EntityLoader (EntityLoader.java:115) - Static select for entity es.dsolerac.employees.domain.employee.entities.Employee [PESSIMISTIC_FORCE_INCREMENT]: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=? for update
+DEBUG | 2017-12-05 13:24:56 | [main] spaces.QuerySpacesImpl (QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6f38a289]
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : firstName
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : lastName
+DEBUG | 2017-12-05 13:24:56 | [main] internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:150) - Building LoadPlan...
+DEBUG | 2017-12-05 13:24:56 | [main] internal.LoadQueryJoinAndFetchProcessor (LoadQueryJoinAndFetchProcessor.java:101) - processing queryspace <gen:0>
+DEBUG | 2017-12-05 13:24:56 | [main] spi.LoadPlanTreePrinter (LoadPlanTreePrinter.java:55) - LoadPlan(entity=es.dsolerac.employees.domain.employee.entities.Employee)
+    - Returns
+       - EntityReturnImpl(entity=es.dsolerac.employees.domain.employee.entities.Employee, querySpaceUid=<gen:0>, path=es.dsolerac.employees.domain.employee.entities.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=es.dsolerac.employees.domain.employee.entities.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {emp_no1_0_0_}
+
+DEBUG | 2017-12-05 13:24:56 | [main] plan.EntityLoader (EntityLoader.java:115) - Static select for entity es.dsolerac.employees.domain.employee.entities.Employee [OPTIMISTIC]: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=?
+DEBUG | 2017-12-05 13:24:56 | [main] spaces.QuerySpacesImpl (QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3cec79d3]
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : firstName
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : lastName
+DEBUG | 2017-12-05 13:24:56 | [main] internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:150) - Building LoadPlan...
+DEBUG | 2017-12-05 13:24:56 | [main] internal.LoadQueryJoinAndFetchProcessor (LoadQueryJoinAndFetchProcessor.java:101) - processing queryspace <gen:0>
+DEBUG | 2017-12-05 13:24:56 | [main] spi.LoadPlanTreePrinter (LoadPlanTreePrinter.java:55) - LoadPlan(entity=es.dsolerac.employees.domain.employee.entities.Employee)
+    - Returns
+       - EntityReturnImpl(entity=es.dsolerac.employees.domain.employee.entities.Employee, querySpaceUid=<gen:0>, path=es.dsolerac.employees.domain.employee.entities.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=es.dsolerac.employees.domain.employee.entities.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {emp_no1_0_0_}
+
+DEBUG | 2017-12-05 13:24:56 | [main] plan.EntityLoader (EntityLoader.java:115) - Static select for entity es.dsolerac.employees.domain.employee.entities.Employee [OPTIMISTIC_FORCE_INCREMENT]: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=?
+DEBUG | 2017-12-05 13:24:56 | [main] entity.CascadeEntityLoader (CascadeEntityLoader.java:38) - Static select for action ACTION_MERGE on entity es.dsolerac.employees.domain.employee.entities.Employee: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=?
+DEBUG | 2017-12-05 13:24:56 | [main] entity.CascadeEntityLoader (CascadeEntityLoader.java:38) - Static select for action ACTION_REFRESH on entity es.dsolerac.employees.domain.employee.entities.Employee: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=?
+DEBUG | 2017-12-05 13:24:56 | [main] spi.SchemaManagementToolCoordinator (SchemaManagementToolCoordinator.java:56) - No actions specified; doing nothing
+DEBUG | 2017-12-05 13:24:56 | [main] internal.JtaPlatformInitiator (JtaPlatformInitiator.java:42) - No JtaPlatform was specified, checking resolver
+DEBUG | 2017-12-05 13:24:56 | [main] internal.JtaPlatformResolverInitiator (JtaPlatformResolverInitiator.java:33) - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+DEBUG | 2017-12-05 13:24:56 | [main] internal.StandardJtaPlatformResolver (StandardJtaPlatformResolver.java:102) - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+DEBUG | 2017-12-05 13:24:56 | [main] spi.NamedQueryRepository (NamedQueryRepository.java:151) - Checking 0 named HQL queries
+DEBUG | 2017-12-05 13:24:56 | [main] spi.NamedQueryRepository (NamedQueryRepository.java:167) - Checking 0 named SQL queries
+DEBUG | 2017-12-05 13:24:56 | [main] internal.SessionFactoryRegistry (SessionFactoryRegistry.java:52) - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@38018b62
+DEBUG | 2017-12-05 13:24:56 | [main] internal.SessionFactoryRegistry (SessionFactoryRegistry.java:74) - Registering SessionFactory: f9f0797f-f2ff-458c-92c0-75486b0f07e4 (<unnamed>)
+DEBUG | 2017-12-05 13:24:56 | [main] internal.SessionFactoryRegistry (SessionFactoryRegistry.java:81) - Not binding SessionFactory to JNDI, no JNDI name configured
+INFO  | 2017-12-05 13:24:56 | [main] jpa.AbstractEntityManagerFactoryBean (AbstractEntityManagerFactoryBean.java:393) - Initialized JPA EntityManagerFactory for persistence unit 'Employees'
+INFO  | 2017-12-05 13:24:56 | [main] jpa.LocalContainerEntityManagerFactoryBean (LocalContainerEntityManagerFactoryBean.java:361) - Building JPA container EntityManagerFactory for persistence unit 'Employees'
+DEBUG | 2017-12-05 13:24:56 | [main] util.LogHelper (LogHelper.java:102) - PersistenceUnitInfo [
+	name: Employees
+	persistence provider classname: org.hibernate.jpa.HibernatePersistenceProvider
+	classloader: sun.misc.Launcher$AppClassLoader@6bc7c054
+	excludeUnlistedClasses: false
+	JTA datasource: null
+	Non JTA datasource: org.apache.commons.dbcp.BasicDataSource@79179359
+	Transaction type: RESOURCE_LOCAL
+	PU root URL: file:/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure/target/classes
+	Shared Cache Mode: UNSPECIFIED
+	Validation Mode: AUTO
+	Jar files URLs []
+	Managed classes names []
+	Mapping files names [
+		es/dsolerac/employees/infrastructure/persistence/jpa/orm-Employee.xml]
+	Properties [
+		hibernate.connection.driver_class: com.mysql.jdbc.Driver
+		hbm2ddl.auto: update
+		hibernate.dialect: org.hibernate.dialect.MySQL57Dialect
+		hibernate.format_sql: true
+		hibernate.connection.username: root
+		hibernate.connection.url: jdbc:mysql://localhost:3306/employees
+		hibernate.show_sql: true
+		hibernate.connection.password: solera
+		hibernate.connection.pool_size: 5]
+DEBUG | 2017-12-05 13:24:56 | [main] internal.IntegratorServiceImpl (IntegratorServiceImpl.java:46) - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+DEBUG | 2017-12-05 13:24:56 | [main] internal.IntegratorServiceImpl (IntegratorServiceImpl.java:46) - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+DEBUG | 2017-12-05 13:24:56 | [main] internal.IntegratorServiceImpl (IntegratorServiceImpl.java:46) - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+DEBUG | 2017-12-05 13:24:56 | [main] internal.IntegratorServiceImpl (IntegratorServiceImpl.java:46) - Adding Integrator [org.hibernate.jpa.event.spi.JpaIntegrator].
+DEBUG | 2017-12-05 13:24:56 | [main] spi.ServiceBinding (ServiceBinding.java:68) - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+DEBUG | 2017-12-05 13:24:56 | [main] internal.RegionFactoryInitiator (RegionFactoryInitiator.java:75) - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration boolean -> org.hibernate.type.BooleanType@c65a5ef
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration boolean -> org.hibernate.type.BooleanType@c65a5ef
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@c65a5ef
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@6e46d9f4
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration true_false -> org.hibernate.type.TrueFalseType@55f3c410
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration yes_no -> org.hibernate.type.YesNoType@4a8ab068
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration byte -> org.hibernate.type.ByteType@611f8234
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration byte -> org.hibernate.type.ByteType@611f8234
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@611f8234
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration character -> org.hibernate.type.CharacterType@4089713
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration char -> org.hibernate.type.CharacterType@4089713
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@4089713
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration short -> org.hibernate.type.ShortType@4a067c25
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration short -> org.hibernate.type.ShortType@4a067c25
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@4a067c25
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration integer -> org.hibernate.type.IntegerType@319dead1
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration int -> org.hibernate.type.IntegerType@319dead1
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@319dead1
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration long -> org.hibernate.type.LongType@2f08c4b
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration long -> org.hibernate.type.LongType@2f08c4b
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.lang.Long -> org.hibernate.type.LongType@2f08c4b
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration float -> org.hibernate.type.FloatType@49f5c307
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration float -> org.hibernate.type.FloatType@49f5c307
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@49f5c307
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration double -> org.hibernate.type.DoubleType@50687efb
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration double -> org.hibernate.type.DoubleType@50687efb
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@50687efb
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@12cd9150
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@12cd9150
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@37eeec90
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@37eeec90
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration string -> org.hibernate.type.StringType@d78795
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.lang.String -> org.hibernate.type.StringType@d78795
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@21694e53
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@62417a16
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration url -> org.hibernate.type.UrlType@64712be
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.net.URL -> org.hibernate.type.UrlType@64712be
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration Duration -> org.hibernate.type.DurationType@59fc684e
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@59fc684e
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration Instant -> org.hibernate.type.InstantType@1a69561c
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@1a69561c
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@138fe6ec
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@138fe6ec
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@16423501
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@16423501
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@4e4efc1b
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@4e4efc1b
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@7a56812e
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@7a56812e
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@7e70bd39
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@7e70bd39
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@9f46d94
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@9f46d94
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration date -> org.hibernate.type.DateType@2755d705
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.sql.Date -> org.hibernate.type.DateType@2755d705
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration time -> org.hibernate.type.TimeType@551a20d6
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@551a20d6
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration timestamp -> org.hibernate.type.TimestampType@4cc547a
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@4cc547a
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@4cc547a
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@3591009c
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration calendar -> org.hibernate.type.CalendarType@758f4f03
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@758f4f03
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@758f4f03
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@660e9100
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration locale -> org.hibernate.type.LocaleType@6db66836
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@6db66836
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration currency -> org.hibernate.type.CurrencyType@4eeea57d
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@4eeea57d
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration timezone -> org.hibernate.type.TimeZoneType@5aabbb29
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@5aabbb29
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration class -> org.hibernate.type.ClassType@1ee4730
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@1ee4730
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@9573b3b
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@9573b3b
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@544630b7
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration binary -> org.hibernate.type.BinaryType@1b822fcc
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration byte[] -> org.hibernate.type.BinaryType@1b822fcc
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration [B -> org.hibernate.type.BinaryType@1b822fcc
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@532721fd
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@532721fd
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@532721fd
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration row_version -> org.hibernate.type.RowVersionType@514eedd8
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration image -> org.hibernate.type.ImageType@245a26e1
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration characters -> org.hibernate.type.CharArrayType@7e1a1da6
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration char[] -> org.hibernate.type.CharArrayType@7e1a1da6
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration [C -> org.hibernate.type.CharArrayType@7e1a1da6
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@60094a13
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@60094a13
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@60094a13
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration text -> org.hibernate.type.TextType@3d3f761a
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration ntext -> org.hibernate.type.NTextType@46ab18da
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration blob -> org.hibernate.type.BlobType@7e0aadd0
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@7e0aadd0
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@200a26bc
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration clob -> org.hibernate.type.ClobType@76318a7d
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@76318a7d
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration nclob -> org.hibernate.type.NClobType@5a62b2a4
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@5a62b2a4
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@620aa4ea
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@4d411036
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration serializable -> org.hibernate.type.SerializableType@7d373bcf
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration object -> org.hibernate.type.ObjectType@2f3c6ac4
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@2f3c6ac4
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@1706a5c9
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@64412d34
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@4d178d55
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@38c2c309
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@1a480135
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@778db7c5
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@681e144
+DEBUG | 2017-12-05 13:24:56 | [main] type.BasicTypeRegistry (BasicTypeRegistry.java:145) - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@2875b016
+WARN  | 2017-12-05 13:24:56 | [main] internal.JdbcEnvironmentInitiator (JdbcEnvironmentInitiator.java:132) - HHH000342: Could not obtain connection to query metadata : Not supported by BasicDataSource
+INFO  | 2017-12-05 13:24:56 | [main] dialect.Dialect (Dialect.java:157) - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+DEBUG | 2017-12-05 13:24:56 | [main] spi.IdentifierHelperBuilder (IdentifierHelperBuilder.java:191) - IdentifierCaseStrategy for both quoted and unquoted identifiers was set to the same strategy [MIXED]; that will likely lead to problems in schema update and validation if using quoted identifiers
+INFO  | 2017-12-05 13:24:56 | [main] internal.LobCreatorBuilderImpl (LobCreatorBuilderImpl.java:63) - HHH000422: Disabling contextual LOB creation as connection was null
+DEBUG | 2017-12-05 13:24:56 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+DEBUG | 2017-12-05 13:24:56 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+DEBUG | 2017-12-05 13:24:56 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+DEBUG | 2017-12-05 13:24:56 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+DEBUG | 2017-12-05 13:24:56 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+DEBUG | 2017-12-05 13:24:56 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+DEBUG | 2017-12-05 13:24:56 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+DEBUG | 2017-12-05 13:24:56 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+DEBUG | 2017-12-05 13:24:56 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+DEBUG | 2017-12-05 13:24:56 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+DEBUG | 2017-12-05 13:24:56 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+DEBUG | 2017-12-05 13:24:56 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+DEBUG | 2017-12-05 13:24:56 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+DEBUG | 2017-12-05 13:24:56 | [main] internal.DefaultIdentifierGeneratorFactory (DefaultIdentifierGeneratorFactory.java:81) - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+DEBUG | 2017-12-05 13:24:56 | [main] relational.Namespace (Namespace.java:47) - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+DEBUG | 2017-12-05 13:24:56 | [main] reflection.XMLContext (XMLContext.java:154) - Adding XML overriding information for es.dsolerac.employees.domain.employee.entities.Employee
+DEBUG | 2017-12-05 13:24:56 | [main] reflection.XMLContext (XMLContext.java:179) - Adding XML overriding information for listeners: []
+DEBUG | 2017-12-05 13:24:56 | [main] internal.ClassLoaderAccessImpl (ClassLoaderAccessImpl.java:55) - Not known whether passed class name [es.dsolerac.employees.domain.employee.entities.Employee] is safe
+DEBUG | 2017-12-05 13:24:56 | [main] internal.ClassLoaderAccessImpl (ClassLoaderAccessImpl.java:57) - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : es.dsolerac.employees.domain.employee.entities.Employee
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.AnnotationBinder (AnnotationBinder.java:511) - Binding entity from annotated class: es.dsolerac.employees.domain.employee.entities.Employee
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Ejb3Column (Ejb3Column.java:213) - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.EntityBinder (EntityBinder.java:419) - Import with entity name employees
+DEBUG | 2017-12-05 13:24:56 | [main] relational.Namespace (Namespace.java:47) - Created database namespace [logicalName=Name{catalog=null, schema=employees}, physicalName=Name{catalog=null, schema=employees}]
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.EntityBinder (EntityBinder.java:695) - Bind entity es.dsolerac.employees.domain.employee.entities.Employee on table employees
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Ejb3Column (Ejb3Column.java:213) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees.employees), mappingColumn=emp_no, insertable=true, updatable=true, unique=false}
+DEBUG | 2017-12-05 13:24:56 | [main] internal.ClassLoaderAccessImpl (ClassLoaderAccessImpl.java:55) - Not known whether passed class name [int] is safe
+DEBUG | 2017-12-05 13:24:56 | [main] internal.ClassLoaderAccessImpl (ClassLoaderAccessImpl.java:57) - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : int
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.PropertyBinder (PropertyBinder.java:174) - MetadataSourceProcessor property id with lazy=false
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.AbstractPropertyHolder (AbstractPropertyHolder.java:95) - Attempting to locate auto-apply AttributeConverter for property [es.dsolerac.employees.domain.employee.entities.Employee:id]
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.SimpleValueBinder (SimpleValueBinder.java:411) - building SimpleValue for id
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.PropertyBinder (PropertyBinder.java:265) - Building property id
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Ejb3Column (Ejb3Column.java:213) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees.employees), mappingColumn=birth_date, insertable=true, updatable=true, unique=false}
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.PropertyBinder (PropertyBinder.java:174) - MetadataSourceProcessor property birthDate with lazy=false
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.AbstractPropertyHolder (AbstractPropertyHolder.java:95) - Attempting to locate auto-apply AttributeConverter for property [es.dsolerac.employees.domain.employee.entities.Employee:birthDate]
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.SimpleValueBinder (SimpleValueBinder.java:411) - building SimpleValue for birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.PropertyBinder (PropertyBinder.java:265) - Building property birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Ejb3Column (Ejb3Column.java:213) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees.employees), mappingColumn=first_name, insertable=true, updatable=true, unique=false}
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.PropertyBinder (PropertyBinder.java:174) - MetadataSourceProcessor property firstName with lazy=false
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.AbstractPropertyHolder (AbstractPropertyHolder.java:95) - Attempting to locate auto-apply AttributeConverter for property [es.dsolerac.employees.domain.employee.entities.Employee:firstName]
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.SimpleValueBinder (SimpleValueBinder.java:411) - building SimpleValue for firstName
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.PropertyBinder (PropertyBinder.java:265) - Building property firstName
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Ejb3Column (Ejb3Column.java:213) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees.employees), mappingColumn=gender, insertable=true, updatable=true, unique=false}
+DEBUG | 2017-12-05 13:24:56 | [main] internal.ClassLoaderAccessImpl (ClassLoaderAccessImpl.java:55) - Not known whether passed class name [es.dsolerac.employees.domain.employee.entities.Gender] is safe
+DEBUG | 2017-12-05 13:24:56 | [main] internal.ClassLoaderAccessImpl (ClassLoaderAccessImpl.java:57) - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : es.dsolerac.employees.domain.employee.entities.Gender
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.PropertyBinder (PropertyBinder.java:174) - MetadataSourceProcessor property gender with lazy=false
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.AbstractPropertyHolder (AbstractPropertyHolder.java:95) - Attempting to locate auto-apply AttributeConverter for property [es.dsolerac.employees.domain.employee.entities.Employee:gender]
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.SimpleValueBinder (SimpleValueBinder.java:411) - building SimpleValue for gender
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.PropertyBinder (PropertyBinder.java:265) - Building property gender
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Ejb3Column (Ejb3Column.java:213) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees.employees), mappingColumn=hire_date, insertable=true, updatable=true, unique=false}
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.PropertyBinder (PropertyBinder.java:174) - MetadataSourceProcessor property hireDate with lazy=false
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.AbstractPropertyHolder (AbstractPropertyHolder.java:95) - Attempting to locate auto-apply AttributeConverter for property [es.dsolerac.employees.domain.employee.entities.Employee:hireDate]
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.SimpleValueBinder (SimpleValueBinder.java:411) - building SimpleValue for hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.PropertyBinder (PropertyBinder.java:265) - Building property hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Ejb3Column (Ejb3Column.java:213) - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees.employees), mappingColumn=last_name, insertable=true, updatable=true, unique=false}
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.PropertyBinder (PropertyBinder.java:174) - MetadataSourceProcessor property lastName with lazy=false
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.AbstractPropertyHolder (AbstractPropertyHolder.java:95) - Attempting to locate auto-apply AttributeConverter for property [es.dsolerac.employees.domain.employee.entities.Employee:lastName]
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.SimpleValueBinder (SimpleValueBinder.java:411) - building SimpleValue for lastName
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.PropertyBinder (PropertyBinder.java:265) - Building property lastName
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.SimpleValueBinder (SimpleValueBinder.java:456) - Starting fillSimpleValue for id
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.SimpleValueBinder (SimpleValueBinder.java:456) - Starting fillSimpleValue for birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.SimpleValueBinder (SimpleValueBinder.java:456) - Starting fillSimpleValue for firstName
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.SimpleValueBinder (SimpleValueBinder.java:456) - Starting fillSimpleValue for gender
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.SimpleValueBinder (SimpleValueBinder.java:456) - Starting fillSimpleValue for hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] annotations.SimpleValueBinder (SimpleValueBinder.java:456) - Starting fillSimpleValue for lastName
+DEBUG | 2017-12-05 13:24:56 | [main] mapping.PrimaryKey (PrimaryKey.java:35) - Forcing column [emp_no] to be non-null as it is part of the primary key for table [employees]
+DEBUG | 2017-12-05 13:24:56 | [main] internal.SessionFactoryImpl (SessionFactoryImpl.java:200) - Building session factory
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:69) - SessionFactory name : null
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:70) - Automatic flush during beforeCompletion(): enabled
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:71) - Automatic session close at end of transaction: disabled
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:73) - Statistics: disabled
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:75) - Deleted entity synthetic identifier rollback: disabled
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:76) - Default entity-mode: pojo
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:77) - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:78) - Allow initialization of lazy state outside session : disabled
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:80) - Using BatchFetchStyle : LEGACY
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:81) - Default batch fetch size: -1
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:82) - Maximum outer join fetch depth: 2
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:83) - Default null ordering: NONE
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:84) - Order SQL updates by primary key: disabled
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:85) - Order SQL inserts for batching: disabled
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:87) - multi-tenancy strategy : NONE
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:89) - JTA Track by Thread: enabled
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:91) - Query language substitutions: {}
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:92) - JPA query language strict compliance: disabled
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:93) - Named query checking : enabled
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:95) - Second-level cache: enabled
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:96) - Second-level query cache: disabled
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:97) - Second-level query cache factory: org.hibernate.cache.internal.StandardQueryCacheFactory@43cf6ea3
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:98) - Second-level cache region prefix: null
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:99) - Optimize second-level cache for minimal puts: disabled
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:100) - Structured second-level cache entries: disabled
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:101) - Second-level cache direct-reference entries: disabled
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:102) - Automatic eviction of collection cache: disabled
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:104) - JDBC batch size: 0
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:105) - JDBC batch updates for versioned data: enabled
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:106) - Scrollable result sets: disabled
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:107) - Wrap result sets: disabled
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:108) - JDBC3 getGeneratedKeys(): disabled
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:109) - JDBC result set fetch size: null
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:110) - Connection release mode: ON_CLOSE
+DEBUG | 2017-12-05 13:24:56 | [main] cfg.Settings (Settings.java:111) - Generate SQL with comments: disabled
+DEBUG | 2017-12-05 13:24:56 | [main] internal.SessionFactoryImpl (SessionFactoryImpl.java:258) - Session factory constructed with filter configurations : {}
+DEBUG | 2017-12-05 13:24:56 | [main] internal.SessionFactoryImpl (SessionFactoryImpl.java:259) - Instantiating session factory with properties: {sun.desktop=gnome, hibernate.format_sql=true, awt.toolkit=sun.awt.X11.XToolkit, file.encoding.pkg=sun.io, java.specification.version=1.8, sun.cpu.isalist=, hibernate.connection.handling_mode=DELAYED_ACQUISITION_AND_HOLD, sun.jnu.encoding=UTF-8, hibernate.dialect=org.hibernate.dialect.MySQL5Dialect, java.class.path=/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure/target/test-classes:/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure/target/classes:/home/dsolerac/Proyectos/Employees/domain/target/domain-1.0-SNAPSHOT.jar:/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-application/target/outside-hexagon-application-1.0-SNAPSHOT.jar:/home/dsolerac/.m2/repository/org/springframework/spring-core/5.0.2.RELEASE/spring-core-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-jcl/5.0.2.RELEASE/spring-jcl-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-beans/5.0.2.RELEASE/spring-beans-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-context/5.0.2.RELEASE/spring-context-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-aop/5.0.2.RELEASE/spring-aop-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-expression/5.0.2.RELEASE/spring-expression-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-orm/5.0.2.RELEASE/spring-orm-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-tx/5.0.2.RELEASE/spring-tx-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-jdbc/5.0.2.RELEASE/spring-jdbc-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/mysql/mysql-connector-java/5.1.39/mysql-connector-java-5.1.39.jar:/home/dsolerac/.m2/repository/org/hibernate/hibernate-core/5.2.12.Final/hibernate-core-5.2.12.Final.jar:/home/dsolerac/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar:/home/dsolerac/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar:/home/dsolerac/.m2/repository/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar:/home/dsolerac/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/home/dsolerac/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.1.Final/jboss-transaction-api_1.2_spec-1.0.1.Final.jar:/home/dsolerac/.m2/repository/org/jboss/jandex/2.0.3.Final/jandex-2.0.3.Final.jar:/home/dsolerac/.m2/repository/com/fasterxml/classmate/1.3.0/classmate-1.3.0.jar:/home/dsolerac/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/home/dsolerac/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.0.1.Final/hibernate-commons-annotations-5.0.1.Final.jar:/home/dsolerac/.m2/repository/org/hibernate/hibernate-entitymanager/5.2.12.Final/hibernate-entitymanager-5.2.12.Final.jar:/home/dsolerac/.m2/repository/net/bytebuddy/byte-buddy/1.6.14/byte-buddy-1.6.14.jar:/home/dsolerac/.m2/repository/commons-dbcp/commons-dbcp/1.4/commons-dbcp-1.4.jar:/home/dsolerac/.m2/repository/commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.jar:/home/dsolerac/.m2/repository/org/springframework/data/spring-data-jpa/2.0.2.RELEASE/spring-data-jpa-2.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/data/spring-data-commons/2.0.2.RELEASE/spring-data-commons-2.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/aspectj/aspectjrt/1.8.12/aspectjrt-1.8.12.jar:/home/dsolerac/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/dsolerac/.m2/repository/com/querydsl/querydsl-core/4.1.4/querydsl-core-4.1.4.jar:/home/dsolerac/.m2/repository/com/google/guava/guava/18.0/guava-18.0.jar:/home/dsolerac/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/home/dsolerac/.m2/repository/com/mysema/commons/mysema-commons-lang/0.2.4/mysema-commons-lang-0.2.4.jar:/home/dsolerac/.m2/repository/com/infradna/tool/bridge-method-annotation/1.13/bridge-method-annotation-1.13.jar:/home/dsolerac/.m2/repository/com/querydsl/querydsl-apt/4.1.4/querydsl-apt-4.1.4.jar:/home/dsolerac/.m2/repository/javax/jdo/jdo-api/3.0.1/jdo-api-3.0.1.jar:/home/dsolerac/.m2/repository/javax/transaction/jta/1.1/jta-1.1.jar:/home/dsolerac/.m2/repository/com/querydsl/querydsl-jpa/4.1.4/querydsl-jpa-4.1.4.jar:/home/dsolerac/.m2/repository/com/querydsl/querydsl-codegen/4.1.4/querydsl-codegen-4.1.4.jar:/home/dsolerac/.m2/repository/com/mysema/codegen/codegen/0.6.8/codegen-0.6.8.jar:/home/dsolerac/.m2/repository/org/eclipse/jdt/core/compiler/ecj/4.3.1/ecj-4.3.1.jar:/home/dsolerac/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/home/dsolerac/.m2/repository/org/reflections/reflections/0.9.9/reflections-0.9.9.jar:/home/dsolerac/.m2/repository/com/google/code/findbugs/annotations/2.0.1/annotations-2.0.1.jar:/home/dsolerac/.m2/repository/com/querydsl/querydsl-jpa-codegen/4.1.4/querydsl-jpa-codegen-4.1.4.jar:/home/dsolerac/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.0.Final/hibernate-jpa-2.0-api-1.0.0.Final.jar:/home/dsolerac/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/dsolerac/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/dsolerac/.m2/repository/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar:/home/dsolerac/.m2/repository/org/springframework/spring-test/5.0.2.RELEASE/spring-test-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/apache/httpcomponents/httpclient/4.3.6/httpclient-4.3.6.jar:/home/dsolerac/.m2/repository/org/apache/httpcomponents/httpcore/4.3.3/httpcore-4.3.3.jar:/home/dsolerac/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/home/dsolerac/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar:/home/dsolerac/.m2/repository/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19.jar:/home/dsolerac/.m2/repository/org/objenesis/objenesis/2.1/objenesis-2.1.jar:/home/dsolerac/.m2/repository/org/apache/logging/log4j/log4j-api/2.8.2/log4j-api-2.8.2.jar:/home/dsolerac/.m2/repository/org/apache/logging/log4j/log4j-core/2.8.2/log4j-core-2.8.2.jar:, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, hbm2ddl.auto=update, java.vendor.url=http://java.oracle.com/, user.timezone=Europe/Madrid, os.name=Linux, java.vm.specification.version=1.8, javax.persistence.validation.mode=AUTO, sun.java.launcher=SUN_STANDARD, user.country=ES, sun.boot.library.path=/usr/lib/jvm/jdk1.8.0/jre/lib/amd64, sun.java.command=/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure/target/surefire/surefirebooter5237540233607883385.jar /home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure/target/surefire/surefire5286922205254440871tmp /home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure/target/surefire/surefire_08000843437868112557tmp, javax.persistence.sharedCache.mode=UNSPECIFIED, surefire.test.class.path=/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure/target/test-classes:/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure/target/classes:/home/dsolerac/Proyectos/Employees/domain/target/domain-1.0-SNAPSHOT.jar:/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-application/target/outside-hexagon-application-1.0-SNAPSHOT.jar:/home/dsolerac/.m2/repository/org/springframework/spring-core/5.0.2.RELEASE/spring-core-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-jcl/5.0.2.RELEASE/spring-jcl-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-beans/5.0.2.RELEASE/spring-beans-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-context/5.0.2.RELEASE/spring-context-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-aop/5.0.2.RELEASE/spring-aop-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-expression/5.0.2.RELEASE/spring-expression-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-orm/5.0.2.RELEASE/spring-orm-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-tx/5.0.2.RELEASE/spring-tx-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/spring-jdbc/5.0.2.RELEASE/spring-jdbc-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/mysql/mysql-connector-java/5.1.39/mysql-connector-java-5.1.39.jar:/home/dsolerac/.m2/repository/org/hibernate/hibernate-core/5.2.12.Final/hibernate-core-5.2.12.Final.jar:/home/dsolerac/.m2/repository/org/jboss/logging/jboss-logging/3.3.0.Final/jboss-logging-3.3.0.Final.jar:/home/dsolerac/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final.jar:/home/dsolerac/.m2/repository/org/javassist/javassist/3.20.0-GA/javassist-3.20.0-GA.jar:/home/dsolerac/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/home/dsolerac/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.0.1.Final/jboss-transaction-api_1.2_spec-1.0.1.Final.jar:/home/dsolerac/.m2/repository/org/jboss/jandex/2.0.3.Final/jandex-2.0.3.Final.jar:/home/dsolerac/.m2/repository/com/fasterxml/classmate/1.3.0/classmate-1.3.0.jar:/home/dsolerac/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/home/dsolerac/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.0.1.Final/hibernate-commons-annotations-5.0.1.Final.jar:/home/dsolerac/.m2/repository/org/hibernate/hibernate-entitymanager/5.2.12.Final/hibernate-entitymanager-5.2.12.Final.jar:/home/dsolerac/.m2/repository/net/bytebuddy/byte-buddy/1.6.14/byte-buddy-1.6.14.jar:/home/dsolerac/.m2/repository/commons-dbcp/commons-dbcp/1.4/commons-dbcp-1.4.jar:/home/dsolerac/.m2/repository/commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.jar:/home/dsolerac/.m2/repository/org/springframework/data/spring-data-jpa/2.0.2.RELEASE/spring-data-jpa-2.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/springframework/data/spring-data-commons/2.0.2.RELEASE/spring-data-commons-2.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/aspectj/aspectjrt/1.8.12/aspectjrt-1.8.12.jar:/home/dsolerac/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/dsolerac/.m2/repository/com/querydsl/querydsl-core/4.1.4/querydsl-core-4.1.4.jar:/home/dsolerac/.m2/repository/com/google/guava/guava/18.0/guava-18.0.jar:/home/dsolerac/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/home/dsolerac/.m2/repository/com/mysema/commons/mysema-commons-lang/0.2.4/mysema-commons-lang-0.2.4.jar:/home/dsolerac/.m2/repository/com/infradna/tool/bridge-method-annotation/1.13/bridge-method-annotation-1.13.jar:/home/dsolerac/.m2/repository/com/querydsl/querydsl-apt/4.1.4/querydsl-apt-4.1.4.jar:/home/dsolerac/.m2/repository/javax/jdo/jdo-api/3.0.1/jdo-api-3.0.1.jar:/home/dsolerac/.m2/repository/javax/transaction/jta/1.1/jta-1.1.jar:/home/dsolerac/.m2/repository/com/querydsl/querydsl-jpa/4.1.4/querydsl-jpa-4.1.4.jar:/home/dsolerac/.m2/repository/com/querydsl/querydsl-codegen/4.1.4/querydsl-codegen-4.1.4.jar:/home/dsolerac/.m2/repository/com/mysema/codegen/codegen/0.6.8/codegen-0.6.8.jar:/home/dsolerac/.m2/repository/org/eclipse/jdt/core/compiler/ecj/4.3.1/ecj-4.3.1.jar:/home/dsolerac/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/home/dsolerac/.m2/repository/org/reflections/reflections/0.9.9/reflections-0.9.9.jar:/home/dsolerac/.m2/repository/com/google/code/findbugs/annotations/2.0.1/annotations-2.0.1.jar:/home/dsolerac/.m2/repository/com/querydsl/querydsl-jpa-codegen/4.1.4/querydsl-jpa-codegen-4.1.4.jar:/home/dsolerac/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.0.Final/hibernate-jpa-2.0-api-1.0.0.Final.jar:/home/dsolerac/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/dsolerac/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/dsolerac/.m2/repository/org/hamcrest/hamcrest-library/1.3/hamcrest-library-1.3.jar:/home/dsolerac/.m2/repository/org/springframework/spring-test/5.0.2.RELEASE/spring-test-5.0.2.RELEASE.jar:/home/dsolerac/.m2/repository/org/apache/httpcomponents/httpclient/4.3.6/httpclient-4.3.6.jar:/home/dsolerac/.m2/repository/org/apache/httpcomponents/httpcore/4.3.3/httpcore-4.3.3.jar:/home/dsolerac/.m2/repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar:/home/dsolerac/.m2/repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar:/home/dsolerac/.m2/repository/org/mockito/mockito-core/1.10.19/mockito-core-1.10.19.jar:/home/dsolerac/.m2/repository/org/objenesis/objenesis/2.1/objenesis-2.1.jar:/home/dsolerac/.m2/repository/org/apache/logging/log4j/log4j-api/2.8.2/log4j-api-2.8.2.jar:/home/dsolerac/.m2/repository/org/apache/logging/log4j/log4j-core/2.8.2/log4j-core-2.8.2.jar:, sun.cpu.endian=little, user.home=/home/dsolerac, user.language=es, java.specification.vendor=Oracle Corporation, java.home=/usr/lib/jvm/jdk1.8.0/jre, file.separator=/, basedir=/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, hibernate.transaction.coordinator_class=class org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl, java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment, surefire.real.class.path=/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure/target/surefire/surefirebooter5237540233607883385.jar, sun.boot.class.path=/usr/lib/jvm/jdk1.8.0/jre/lib/resources.jar:/usr/lib/jvm/jdk1.8.0/jre/lib/rt.jar:/usr/lib/jvm/jdk1.8.0/jre/lib/sunrsasign.jar:/usr/lib/jvm/jdk1.8.0/jre/lib/jsse.jar:/usr/lib/jvm/jdk1.8.0/jre/lib/jce.jar:/usr/lib/jvm/jdk1.8.0/jre/lib/charsets.jar:/usr/lib/jvm/jdk1.8.0/jre/lib/jfr.jar:/usr/lib/jvm/jdk1.8.0/jre/classes, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, java.runtime.version=1.8.0_144-b01, user.name=dsolerac, path.separator=:, hibernate.connection.username=root, os.version=4.10.0-40-generic, java.endorsed.dirs=/usr/lib/jvm/jdk1.8.0/jre/lib/endorsed, java.runtime.name=Java(TM) SE Runtime Environment, hibernate.connection.url=jdbc:mysql://localhost:3306/employees, hibernate.ejb.persistenceUnitName=Employees, file.encoding=UTF-8, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, hibernate.show_sql=true, localRepository=/home/dsolerac/.m2/repository, hibernate.connection.driver_class=com.mysql.jdbc.Driver, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, java.io.tmpdir=/tmp, java.version=1.8.0_144, user.dir=/home/dsolerac/Proyectos/Employees/outside-hexagon/outside-hexagon-infrastructure, os.arch=amd64, java.vm.specification.name=Java Virtual Machine Specification, hibernate.connection.password=****, java.awt.printerjob=sun.print.PSPrinterJob, sun.os.patch.level=unknown, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@3730ab42, java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib, java.vendor=Oracle Corporation, java.vm.info=mixed mode, java.vm.version=25.144-b01, hibernate.bytecode.use_reflection_optimizer=false, hibernate.connection.datasource=org.apache.commons.dbcp.BasicDataSource@79179359, sun.io.unicode.encoding=UnicodeLittle, java.ext.dirs=/usr/lib/jvm/jdk1.8.0/jre/lib/ext:/usr/java/packages/lib/ext, hibernate.connection.pool_size=5, java.class.version=52.0}
+DEBUG | 2017-12-05 13:24:56 | [main] spi.JaccIntegrator (JaccIntegrator.java:80) - Skipping JACC integration as it was not enabled
+DEBUG | 2017-12-05 13:24:56 | [main] spi.CascadeStyles (CascadeStyles.java:268) - External cascade style registration [persist : STYLE_PERSIST_SKIPLAZY] overrode base registration [STYLE_PERSIST_SKIPLAZY]
+DEBUG | 2017-12-05 13:24:56 | [main] internal.SessionFactoryImpl (SessionFactoryImpl.java:298) - Instantiated session factory
+DEBUG | 2017-12-05 13:24:56 | [main] internal.ClassLoaderAccessImpl (ClassLoaderAccessImpl.java:55) - Not known whether passed class name [es.dsolerac.employees.domain.employee.entities.Employee] is safe
+DEBUG | 2017-12-05 13:24:56 | [main] internal.ClassLoaderAccessImpl (ClassLoaderAccessImpl.java:57) - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : es.dsolerac.employees.domain.employee.entities.Employee
+DEBUG | 2017-12-05 13:24:56 | [main] internal.ClassLoaderAccessImpl (ClassLoaderAccessImpl.java:55) - Not known whether passed class name [es.dsolerac.employees.domain.employee.entities.Employee] is safe
+DEBUG | 2017-12-05 13:24:56 | [main] internal.ClassLoaderAccessImpl (ClassLoaderAccessImpl.java:57) - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : es.dsolerac.employees.domain.employee.entities.Employee
+DEBUG | 2017-12-05 13:24:56 | [main] entity.AbstractEntityPersister (AbstractEntityPersister.java:3608) - Static SQL for entity: es.dsolerac.employees.domain.employee.entities.Employee
+DEBUG | 2017-12-05 13:24:56 | [main] entity.AbstractEntityPersister (AbstractEntityPersister.java:3613) -  Version select: select emp_no from employees.employees where emp_no =?
+DEBUG | 2017-12-05 13:24:56 | [main] entity.AbstractEntityPersister (AbstractEntityPersister.java:3616) -  Snapshot select: select employee_.emp_no, employee_.birth_date as birth_da2_0_, employee_.first_name as first_na3_0_, employee_.gender as gender4_0_, employee_.hire_date as hire_dat5_0_, employee_.last_name as last_nam6_0_ from employees.employees employee_ where employee_.emp_no=?
+DEBUG | 2017-12-05 13:24:56 | [main] logging.DelegatingBasicLogger (DelegatingBasicLogger.java:394) -  Insert 0: insert into employees.employees (birth_date, first_name, gender, hire_date, last_name, emp_no) values (?, ?, ?, ?, ?, ?)
+DEBUG | 2017-12-05 13:24:56 | [main] logging.DelegatingBasicLogger (DelegatingBasicLogger.java:394) -  Update 0: update employees.employees set birth_date=?, first_name=?, gender=?, hire_date=?, last_name=? where emp_no=?
+DEBUG | 2017-12-05 13:24:56 | [main] logging.DelegatingBasicLogger (DelegatingBasicLogger.java:394) -  Delete 0: delete from employees.employees where emp_no=?
+DEBUG | 2017-12-05 13:24:56 | [main] spaces.QuerySpacesImpl (QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@573284a5]
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : firstName
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : lastName
+DEBUG | 2017-12-05 13:24:56 | [main] internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:150) - Building LoadPlan...
+DEBUG | 2017-12-05 13:24:56 | [main] internal.LoadQueryJoinAndFetchProcessor (LoadQueryJoinAndFetchProcessor.java:101) - processing queryspace <gen:0>
+DEBUG | 2017-12-05 13:24:56 | [main] spi.LoadPlanTreePrinter (LoadPlanTreePrinter.java:55) - LoadPlan(entity=es.dsolerac.employees.domain.employee.entities.Employee)
+    - Returns
+       - EntityReturnImpl(entity=es.dsolerac.employees.domain.employee.entities.Employee, querySpaceUid=<gen:0>, path=es.dsolerac.employees.domain.employee.entities.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=es.dsolerac.employees.domain.employee.entities.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {emp_no1_0_0_}
+
+DEBUG | 2017-12-05 13:24:56 | [main] plan.EntityLoader (EntityLoader.java:115) - Static select for entity es.dsolerac.employees.domain.employee.entities.Employee [NONE]: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=?
+DEBUG | 2017-12-05 13:24:56 | [main] spaces.QuerySpacesImpl (QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@23f72d88]
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : firstName
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : lastName
+DEBUG | 2017-12-05 13:24:56 | [main] internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:150) - Building LoadPlan...
+DEBUG | 2017-12-05 13:24:56 | [main] internal.LoadQueryJoinAndFetchProcessor (LoadQueryJoinAndFetchProcessor.java:101) - processing queryspace <gen:0>
+DEBUG | 2017-12-05 13:24:56 | [main] spi.LoadPlanTreePrinter (LoadPlanTreePrinter.java:55) - LoadPlan(entity=es.dsolerac.employees.domain.employee.entities.Employee)
+    - Returns
+       - EntityReturnImpl(entity=es.dsolerac.employees.domain.employee.entities.Employee, querySpaceUid=<gen:0>, path=es.dsolerac.employees.domain.employee.entities.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=es.dsolerac.employees.domain.employee.entities.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {emp_no1_0_0_}
+
+DEBUG | 2017-12-05 13:24:56 | [main] plan.EntityLoader (EntityLoader.java:115) - Static select for entity es.dsolerac.employees.domain.employee.entities.Employee [READ]: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=?
+DEBUG | 2017-12-05 13:24:56 | [main] spaces.QuerySpacesImpl (QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@87b5b49]
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : firstName
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : lastName
+DEBUG | 2017-12-05 13:24:56 | [main] internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:150) - Building LoadPlan...
+DEBUG | 2017-12-05 13:24:56 | [main] internal.LoadQueryJoinAndFetchProcessor (LoadQueryJoinAndFetchProcessor.java:101) - processing queryspace <gen:0>
+DEBUG | 2017-12-05 13:24:56 | [main] spi.LoadPlanTreePrinter (LoadPlanTreePrinter.java:55) - LoadPlan(entity=es.dsolerac.employees.domain.employee.entities.Employee)
+    - Returns
+       - EntityReturnImpl(entity=es.dsolerac.employees.domain.employee.entities.Employee, querySpaceUid=<gen:0>, path=es.dsolerac.employees.domain.employee.entities.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=es.dsolerac.employees.domain.employee.entities.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {emp_no1_0_0_}
+
+DEBUG | 2017-12-05 13:24:56 | [main] plan.EntityLoader (EntityLoader.java:115) - Static select for entity es.dsolerac.employees.domain.employee.entities.Employee [UPGRADE]: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=? for update
+DEBUG | 2017-12-05 13:24:56 | [main] spaces.QuerySpacesImpl (QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@507b79f7]
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : firstName
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : lastName
+DEBUG | 2017-12-05 13:24:56 | [main] internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:150) - Building LoadPlan...
+DEBUG | 2017-12-05 13:24:56 | [main] internal.LoadQueryJoinAndFetchProcessor (LoadQueryJoinAndFetchProcessor.java:101) - processing queryspace <gen:0>
+DEBUG | 2017-12-05 13:24:56 | [main] spi.LoadPlanTreePrinter (LoadPlanTreePrinter.java:55) - LoadPlan(entity=es.dsolerac.employees.domain.employee.entities.Employee)
+    - Returns
+       - EntityReturnImpl(entity=es.dsolerac.employees.domain.employee.entities.Employee, querySpaceUid=<gen:0>, path=es.dsolerac.employees.domain.employee.entities.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=es.dsolerac.employees.domain.employee.entities.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {emp_no1_0_0_}
+
+DEBUG | 2017-12-05 13:24:56 | [main] plan.EntityLoader (EntityLoader.java:115) - Static select for entity es.dsolerac.employees.domain.employee.entities.Employee [UPGRADE_NOWAIT]: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=? for update
+DEBUG | 2017-12-05 13:24:56 | [main] spaces.QuerySpacesImpl (QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@365a6a43]
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : firstName
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : lastName
+DEBUG | 2017-12-05 13:24:56 | [main] internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:150) - Building LoadPlan...
+DEBUG | 2017-12-05 13:24:56 | [main] internal.LoadQueryJoinAndFetchProcessor (LoadQueryJoinAndFetchProcessor.java:101) - processing queryspace <gen:0>
+DEBUG | 2017-12-05 13:24:56 | [main] spi.LoadPlanTreePrinter (LoadPlanTreePrinter.java:55) - LoadPlan(entity=es.dsolerac.employees.domain.employee.entities.Employee)
+    - Returns
+       - EntityReturnImpl(entity=es.dsolerac.employees.domain.employee.entities.Employee, querySpaceUid=<gen:0>, path=es.dsolerac.employees.domain.employee.entities.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=es.dsolerac.employees.domain.employee.entities.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {emp_no1_0_0_}
+
+DEBUG | 2017-12-05 13:24:56 | [main] plan.EntityLoader (EntityLoader.java:115) - Static select for entity es.dsolerac.employees.domain.employee.entities.Employee [UPGRADE_SKIPLOCKED]: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=? for update
+DEBUG | 2017-12-05 13:24:56 | [main] spaces.QuerySpacesImpl (QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@23b3aa8c]
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : firstName
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : lastName
+DEBUG | 2017-12-05 13:24:56 | [main] internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:150) - Building LoadPlan...
+DEBUG | 2017-12-05 13:24:56 | [main] internal.LoadQueryJoinAndFetchProcessor (LoadQueryJoinAndFetchProcessor.java:101) - processing queryspace <gen:0>
+DEBUG | 2017-12-05 13:24:56 | [main] spi.LoadPlanTreePrinter (LoadPlanTreePrinter.java:55) - LoadPlan(entity=es.dsolerac.employees.domain.employee.entities.Employee)
+    - Returns
+       - EntityReturnImpl(entity=es.dsolerac.employees.domain.employee.entities.Employee, querySpaceUid=<gen:0>, path=es.dsolerac.employees.domain.employee.entities.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=es.dsolerac.employees.domain.employee.entities.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {emp_no1_0_0_}
+
+DEBUG | 2017-12-05 13:24:56 | [main] plan.EntityLoader (EntityLoader.java:115) - Static select for entity es.dsolerac.employees.domain.employee.entities.Employee [FORCE]: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=? for update
+DEBUG | 2017-12-05 13:24:56 | [main] spaces.QuerySpacesImpl (QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6c796cc1]
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : firstName
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : lastName
+DEBUG | 2017-12-05 13:24:56 | [main] internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:150) - Building LoadPlan...
+DEBUG | 2017-12-05 13:24:56 | [main] internal.LoadQueryJoinAndFetchProcessor (LoadQueryJoinAndFetchProcessor.java:101) - processing queryspace <gen:0>
+DEBUG | 2017-12-05 13:24:56 | [main] spi.LoadPlanTreePrinter (LoadPlanTreePrinter.java:55) - LoadPlan(entity=es.dsolerac.employees.domain.employee.entities.Employee)
+    - Returns
+       - EntityReturnImpl(entity=es.dsolerac.employees.domain.employee.entities.Employee, querySpaceUid=<gen:0>, path=es.dsolerac.employees.domain.employee.entities.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=es.dsolerac.employees.domain.employee.entities.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {emp_no1_0_0_}
+
+DEBUG | 2017-12-05 13:24:56 | [main] plan.EntityLoader (EntityLoader.java:115) - Static select for entity es.dsolerac.employees.domain.employee.entities.Employee [PESSIMISTIC_READ]: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=? lock in share mode
+DEBUG | 2017-12-05 13:24:56 | [main] spaces.QuerySpacesImpl (QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1cb7936c]
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : firstName
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : lastName
+DEBUG | 2017-12-05 13:24:56 | [main] internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:150) - Building LoadPlan...
+DEBUG | 2017-12-05 13:24:56 | [main] internal.LoadQueryJoinAndFetchProcessor (LoadQueryJoinAndFetchProcessor.java:101) - processing queryspace <gen:0>
+DEBUG | 2017-12-05 13:24:56 | [main] spi.LoadPlanTreePrinter (LoadPlanTreePrinter.java:55) - LoadPlan(entity=es.dsolerac.employees.domain.employee.entities.Employee)
+    - Returns
+       - EntityReturnImpl(entity=es.dsolerac.employees.domain.employee.entities.Employee, querySpaceUid=<gen:0>, path=es.dsolerac.employees.domain.employee.entities.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=es.dsolerac.employees.domain.employee.entities.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {emp_no1_0_0_}
+
+DEBUG | 2017-12-05 13:24:56 | [main] plan.EntityLoader (EntityLoader.java:115) - Static select for entity es.dsolerac.employees.domain.employee.entities.Employee [PESSIMISTIC_WRITE]: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=? for update
+DEBUG | 2017-12-05 13:24:56 | [main] spaces.QuerySpacesImpl (QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@128c502c]
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : firstName
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : lastName
+DEBUG | 2017-12-05 13:24:56 | [main] internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:150) - Building LoadPlan...
+DEBUG | 2017-12-05 13:24:56 | [main] internal.LoadQueryJoinAndFetchProcessor (LoadQueryJoinAndFetchProcessor.java:101) - processing queryspace <gen:0>
+DEBUG | 2017-12-05 13:24:56 | [main] spi.LoadPlanTreePrinter (LoadPlanTreePrinter.java:55) - LoadPlan(entity=es.dsolerac.employees.domain.employee.entities.Employee)
+    - Returns
+       - EntityReturnImpl(entity=es.dsolerac.employees.domain.employee.entities.Employee, querySpaceUid=<gen:0>, path=es.dsolerac.employees.domain.employee.entities.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=es.dsolerac.employees.domain.employee.entities.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {emp_no1_0_0_}
+
+DEBUG | 2017-12-05 13:24:56 | [main] plan.EntityLoader (EntityLoader.java:115) - Static select for entity es.dsolerac.employees.domain.employee.entities.Employee [PESSIMISTIC_FORCE_INCREMENT]: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=? for update
+DEBUG | 2017-12-05 13:24:56 | [main] spaces.QuerySpacesImpl (QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@65eabaab]
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : firstName
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : lastName
+DEBUG | 2017-12-05 13:24:56 | [main] internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:150) - Building LoadPlan...
+DEBUG | 2017-12-05 13:24:56 | [main] internal.LoadQueryJoinAndFetchProcessor (LoadQueryJoinAndFetchProcessor.java:101) - processing queryspace <gen:0>
+DEBUG | 2017-12-05 13:24:56 | [main] spi.LoadPlanTreePrinter (LoadPlanTreePrinter.java:55) - LoadPlan(entity=es.dsolerac.employees.domain.employee.entities.Employee)
+    - Returns
+       - EntityReturnImpl(entity=es.dsolerac.employees.domain.employee.entities.Employee, querySpaceUid=<gen:0>, path=es.dsolerac.employees.domain.employee.entities.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=es.dsolerac.employees.domain.employee.entities.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {emp_no1_0_0_}
+
+DEBUG | 2017-12-05 13:24:56 | [main] plan.EntityLoader (EntityLoader.java:115) - Static select for entity es.dsolerac.employees.domain.employee.entities.Employee [OPTIMISTIC]: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=?
+DEBUG | 2017-12-05 13:24:56 | [main] spaces.QuerySpacesImpl (QuerySpacesImpl.java:174) - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1de9d54]
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : birthDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : firstName
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : gender
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : hireDate
+DEBUG | 2017-12-05 13:24:56 | [main] spi.MetamodelGraphWalker (MetamodelGraphWalker.java:137) - Visiting attribute path : lastName
+DEBUG | 2017-12-05 13:24:56 | [main] internal.FetchStyleLoadPlanBuildingAssociationVisitationStrategy (FetchStyleLoadPlanBuildingAssociationVisitationStrategy.java:150) - Building LoadPlan...
+DEBUG | 2017-12-05 13:24:56 | [main] internal.LoadQueryJoinAndFetchProcessor (LoadQueryJoinAndFetchProcessor.java:101) - processing queryspace <gen:0>
+DEBUG | 2017-12-05 13:24:56 | [main] spi.LoadPlanTreePrinter (LoadPlanTreePrinter.java:55) - LoadPlan(entity=es.dsolerac.employees.domain.employee.entities.Employee)
+    - Returns
+       - EntityReturnImpl(entity=es.dsolerac.employees.domain.employee.entities.Employee, querySpaceUid=<gen:0>, path=es.dsolerac.employees.domain.employee.entities.Employee)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=es.dsolerac.employees.domain.employee.entities.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {emp_no1_0_0_}
+
+DEBUG | 2017-12-05 13:24:56 | [main] plan.EntityLoader (EntityLoader.java:115) - Static select for entity es.dsolerac.employees.domain.employee.entities.Employee [OPTIMISTIC_FORCE_INCREMENT]: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=?
+DEBUG | 2017-12-05 13:24:56 | [main] entity.CascadeEntityLoader (CascadeEntityLoader.java:38) - Static select for action ACTION_MERGE on entity es.dsolerac.employees.domain.employee.entities.Employee: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=?
+DEBUG | 2017-12-05 13:24:56 | [main] entity.CascadeEntityLoader (CascadeEntityLoader.java:38) - Static select for action ACTION_REFRESH on entity es.dsolerac.employees.domain.employee.entities.Employee: select employee0_.emp_no as emp_no1_0_0_, employee0_.birth_date as birth_da2_0_0_, employee0_.first_name as first_na3_0_0_, employee0_.gender as gender4_0_0_, employee0_.hire_date as hire_dat5_0_0_, employee0_.last_name as last_nam6_0_0_ from employees.employees employee0_ where employee0_.emp_no=?
+DEBUG | 2017-12-05 13:24:56 | [main] spi.SchemaManagementToolCoordinator (SchemaManagementToolCoordinator.java:56) - No actions specified; doing nothing
+DEBUG | 2017-12-05 13:24:56 | [main] internal.JtaPlatformInitiator (JtaPlatformInitiator.java:42) - No JtaPlatform was specified, checking resolver
+DEBUG | 2017-12-05 13:24:56 | [main] internal.JtaPlatformResolverInitiator (JtaPlatformResolverInitiator.java:33) - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+DEBUG | 2017-12-05 13:24:56 | [main] internal.StandardJtaPlatformResolver (StandardJtaPlatformResolver.java:102) - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+DEBUG | 2017-12-05 13:24:56 | [main] spi.NamedQueryRepository (NamedQueryRepository.java:151) - Checking 0 named HQL queries
+DEBUG | 2017-12-05 13:24:56 | [main] spi.NamedQueryRepository (NamedQueryRepository.java:167) - Checking 0 named SQL queries
+DEBUG | 2017-12-05 13:24:56 | [main] internal.SessionFactoryRegistry (SessionFactoryRegistry.java:74) - Registering SessionFactory: 959f4d58-3576-476c-82e7-462e8abb24d7 (<unnamed>)
+DEBUG | 2017-12-05 13:24:56 | [main] internal.SessionFactoryRegistry (SessionFactoryRegistry.java:81) - Not binding SessionFactory to JNDI, no JNDI name configured
+INFO  | 2017-12-05 13:24:56 | [main] jpa.AbstractEntityManagerFactoryBean (AbstractEntityManagerFactoryBean.java:393) - Initialized JPA EntityManagerFactory for persistence unit 'Employees'
+DEBUG | 2017-12-05 13:24:56 | [main] internal.StatisticsInitiator (StatisticsInitiator.java:82) - Statistics initialized [enabled=false]
+DEBUG | 2017-12-05 13:24:56 | [main] internal.QueryTranslatorFactoryInitiator (QueryTranslatorFactoryInitiator.java:45) - QueryTranslatorFactory : org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory@7c36db44
+INFO  | 2017-12-05 13:24:56 | [main] internal.QueryTranslatorFactoryInitiator (QueryTranslatorFactoryInitiator.java:47) - HHH000397: Using ASTQueryTranslatorFactory
+DEBUG | 2017-12-05 13:24:56 | [main] ast.QueryTranslatorImpl (QueryTranslatorImpl.java:282) - parse() - HQL: SELECT COUNT (e) FROM es.dsolerac.employees.domain.employee.entities.Employee e WHERE e.birthDate > :localDate
+DEBUG | 2017-12-05 13:24:56 | [main] ast.ErrorCounter (ErrorCounter.java:95) - throwQueryException() : no errors
+DEBUG | 2017-12-05 13:24:56 | [main] ast.QueryTranslatorImpl (QueryTranslatorImpl.java:305) - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  +-[FROM] Node: 'FROM'
+    |  |  \-[RANGE] Node: 'RANGE'
+    |  |     +-[DOT] Node: '.'
+    |  |     |  +-[DOT] Node: '.'
+    |  |     |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  |  +-[DOT] Node: '.'
+    |  |     |  |  |  |  |  |  +-[IDENT] Node: 'es'
+    |  |     |  |  |  |  |  |  \-[IDENT] Node: 'dsolerac'
+    |  |     |  |  |  |  |  \-[IDENT] Node: 'employees'
+    |  |     |  |  |  |  \-[IDENT] Node: 'domain'
+    |  |     |  |  |  \-[IDENT] Node: 'employee'
+    |  |     |  |  \-[IDENT] Node: 'entities'
+    |  |     |  \-[IDENT] Node: 'Employee'
+    |  |     \-[ALIAS] Node: 'e'
+    |  \-[SELECT] Node: 'SELECT'
+    |     \-[COUNT] Node: 'COUNT'
+    |        \-[IDENT] Node: 'e'
+    \-[WHERE] Node: 'WHERE'
+       \-[GT] Node: '>'
+          +-[DOT] Node: '.'
+          |  +-[IDENT] Node: 'e'
+          |  \-[IDENT] Node: 'birthDate'
+          \-[COLON] Node: ':'
+             \-[IDENT] Node: 'localDate'
+
+DEBUG | 2017-12-05 13:24:56 | [main] antlr.HqlSqlBaseWalker (HqlSqlBaseWalker.java:124) - select << begin [level=1, statement=select]
+DEBUG | 2017-12-05 13:24:56 | [main] tree.FromElement (FromElement.java:147) - FromClause{level=1} : es.dsolerac.employees.domain.employee.entities.Employee (e) -> employee0_
+DEBUG | 2017-12-05 13:24:56 | [main] tree.FromReferenceNode (FromReferenceNode.java:60) - Resolved : e -> employee0_.emp_no
+DEBUG | 2017-12-05 13:24:56 | [main] tree.FromReferenceNode (FromReferenceNode.java:60) - Resolved : e -> employee0_.emp_no
+DEBUG | 2017-12-05 13:24:56 | [main] tree.DotNode (DotNode.java:666) - getDataType() : birthDate -> org.hibernate.type.LocalDateType@16423501
+DEBUG | 2017-12-05 13:24:56 | [main] tree.FromReferenceNode (FromReferenceNode.java:60) - Resolved : e.birthDate -> employee0_.birth_date
+DEBUG | 2017-12-05 13:24:56 | [main] antlr.HqlSqlBaseWalker (HqlSqlBaseWalker.java:128) - select : finishing up [level=1, statement=select]
+DEBUG | 2017-12-05 13:24:56 | [main] ast.HqlSqlWalker (HqlSqlWalker.java:747) - processQuery() :  ( SELECT ( {select clause} ( COUNT employee0_.emp_no ) ) ( FromClause{level=1} employees.employees employee0_ ) ( WHERE ( > ( employee0_.birth_date employee0_.emp_no birthDate ) ? ) ) )
+DEBUG | 2017-12-05 13:24:56 | [main] util.JoinProcessor (JoinProcessor.java:192) - Using FROM fragment [employees.employees employee0_]
+DEBUG | 2017-12-05 13:24:56 | [main] antlr.HqlSqlBaseWalker (HqlSqlBaseWalker.java:132) - select >> end [level=1, statement=select]
+DEBUG | 2017-12-05 13:24:56 | [main] ast.QueryTranslatorImpl (QueryTranslatorImpl.java:269) - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (employees.employees)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[COUNT] CountNode: 'COUNT'
+    |  |  \-[ALIAS_REF] IdentNode: 'employee0_.emp_no' {alias=e, className=es.dsolerac.employees.domain.employee.entities.Employee, tableAlias=employee0_}
+    |  \-[SELECT_COLUMNS] SqlNode: ' as col_0_0_'
+    +-[FROM] FromClause: 'FROM' FromClause{level=1, fromElementCounter=1, fromElements=1, fromElementByClassAlias=[e], fromElementByTableAlias=[employee0_], fromElementsByPath=[], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'employees.employees employee0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=e,role=null,tableName=employees.employees,tableAlias=employee0_,origin=null,columns={,className=es.dsolerac.employees.domain.employee.entities.Employee}}
+    \-[WHERE] SqlNode: 'WHERE'
+       \-[GT] BinaryLogicOperatorNode: '>'
+          +-[DOT] DotNode: 'employee0_.birth_date' {propertyName=birthDate,dereferenceType=PRIMITIVE,getPropertyPath=birthDate,path=e.birthDate,tableAlias=employee0_,className=es.dsolerac.employees.domain.employee.entities.Employee,classAlias=e}
+          |  +-[ALIAS_REF] IdentNode: 'employee0_.emp_no' {alias=e, className=es.dsolerac.employees.domain.employee.entities.Employee, tableAlias=employee0_}
+          |  \-[IDENT] IdentNode: 'birthDate' {originalText=birthDate}
+          \-[NAMED_PARAM] ParameterNode: '?' {name=localDate, expectedType=org.hibernate.type.LocalDateType@16423501}
+
+DEBUG | 2017-12-05 13:24:56 | [main] ast.ErrorCounter (ErrorCounter.java:95) - throwQueryException() : no errors
+DEBUG | 2017-12-05 13:24:56 | [main] ast.QueryTranslatorImpl (QueryTranslatorImpl.java:251) - HQL: SELECT COUNT (e) FROM es.dsolerac.employees.domain.employee.entities.Employee e WHERE e.birthDate > :localDate
+DEBUG | 2017-12-05 13:24:56 | [main] ast.QueryTranslatorImpl (QueryTranslatorImpl.java:252) - SQL: select count(employee0_.emp_no) as col_0_0_ from employees.employees employee0_ where employee0_.birth_date>?
+DEBUG | 2017-12-05 13:24:56 | [main] ast.ErrorCounter (ErrorCounter.java:95) - throwQueryException() : no errors
+DEBUG | 2017-12-05 13:24:57 | [main] internal.TransactionImpl (TransactionImpl.java:55) - begin
+WARN  | 2017-12-05 13:24:57 | [main] context.TestContextManager (TestContextManager.java:536) - Caught exception while invoking 'beforeTestMethod' callback on TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener@747ddf94] for test method [public void es.dsolerac.employees.application.services.EmployeeServiceTest.count()] and test instance [es.dsolerac.employees.application.services.EmployeeServiceTest@37045b48]
+org.springframework.transaction.CannotCreateTransactionException: Could not open JPA EntityManager for transaction; nested exception is java.lang.UnsupportedOperationException: Not supported by BasicDataSource
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:450) ~[spring-orm-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:374) ~[spring-tx-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.test.context.transaction.TransactionContext.startTransaction(TransactionContext.java:101) ~[spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.test.context.transaction.TransactionalTestExecutionListener.beforeTestMethod(TransactionalTestExecutionListener.java:192) ~[spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.test.context.TestContextManager.beforeTestMethod(TestContextManager.java:287) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:74) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58) [junit-4.12.jar:4.12]
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363) [junit-4.12.jar:4.12]
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190) [spring-test-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:264) [surefire-junit4-2.17.jar:2.17]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:153) [surefire-junit4-2.17.jar:2.17]
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:124) [surefire-junit4-2.17.jar:2.17]
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:200) [surefire-booter-2.17.jar:2.17]
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:153) [surefire-booter-2.17.jar:2.17]
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103) [surefire-booter-2.17.jar:2.17]
+Caused by: java.lang.UnsupportedOperationException: Not supported by BasicDataSource
+	at org.apache.commons.dbcp.BasicDataSource.getConnection(BasicDataSource.java:1062) ~[commons-dbcp-1.4.jar:1.4]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122) ~[hibernate-core-5.2.12.Final.jar:5.2.12.Final]
+	at org.hibernate.internal.NonContextualJdbcConnectionAccess.obtainConnection(NonContextualJdbcConnectionAccess.java:35) ~[hibernate-core-5.2.12.Final.jar:5.2.12.Final]
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.acquireConnectionIfNeeded(LogicalConnectionManagedImpl.java:106) ~[hibernate-core-5.2.12.Final.jar:5.2.12.Final]
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getPhysicalConnection(LogicalConnectionManagedImpl.java:136) ~[hibernate-core-5.2.12.Final.jar:5.2.12.Final]
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.getConnectionForTransactionManagement(LogicalConnectionManagedImpl.java:254) ~[hibernate-core-5.2.12.Final.jar:5.2.12.Final]
+	at org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl.begin(LogicalConnectionManagedImpl.java:262) ~[hibernate-core-5.2.12.Final.jar:5.2.12.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl$TransactionDriverControlImpl.begin(JdbcResourceLocalTransactionCoordinatorImpl.java:214) ~[hibernate-core-5.2.12.Final.jar:5.2.12.Final]
+	at org.hibernate.engine.transaction.internal.TransactionImpl.begin(TransactionImpl.java:56) ~[hibernate-core-5.2.12.Final.jar:5.2.12.Final]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.beginTransaction(HibernateJpaDialect.java:164) ~[spring-orm-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	at org.springframework.orm.jpa.JpaTransactionManager.doBegin(JpaTransactionManager.java:400) ~[spring-orm-5.0.2.RELEASE.jar:5.0.2.RELEASE]
+	... 26 more
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+]]></system-err>
+  </testcase>
+  <testcase name="thisShortNameAlreadyExists" classname="es.dsolerac.employees.application.services.EmployeeServiceTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="modifyUser" classname="es.dsolerac.employees.application.services.EmployeeServiceTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="deleteUser" classname="es.dsolerac.employees.application.services.EmployeeServiceTest" time="0">
+    <skipped/>
+  </testcase>
+</testsuite>
