@@ -1,5 +1,7 @@
 package es.dsolerac.employees.domain.employee.repository;
 
+import es.dsolerac.employees.domain.employee.entities.Salary;
+
 import java.time.LocalDate;
 import java.util.List;
 
@@ -13,7 +15,7 @@ import java.util.List;
  *
  * Created by dsolerac on 10/11/17.
  */
-public interface EmployeeRepository<Employee, Integer> {
+public interface EmployeeRepository<Employee, Integer>  {
 
 
     public List<Employee> findByfirstNameLike(String firstName);
@@ -23,6 +25,8 @@ public interface EmployeeRepository<Employee, Integer> {
     public List<Employee> countByBirthDateAfter(LocalDate localDate);
 
     public long countByGender();
+
+
 
 
 

@@ -1,5 +1,7 @@
 package es.dsolerac.employees.domain.employee.entities;
 
+import es.dsolerac.employees.domain.employee.entities.composedIds.SalaryID;
+
 import java.time.LocalDate;
 
 /**
@@ -7,18 +9,29 @@ import java.time.LocalDate;
  */
 public class Salary {
 
-    private int emp_no;
+
+
+    //    private SalaryID salaryID;
+    private LocalDate fromDate;
     private int salary;
-    private LocalDate from_date;
-    private LocalDate to_date;
+    private LocalDate toDate;
+    private Employee employee;
 
 
-    public int getEmp_no() {
-        return emp_no;
+//    public SalaryID getSalaryID() {
+//        return salaryID;
+//    }
+
+//    public void setSalaryID(SalaryID salaryID) {
+//        this.salaryID = salaryID;
+//    }
+
+    public LocalDate getFromDate() {
+        return fromDate;
     }
 
-    public void setEmp_no(int emp_no) {
-        this.emp_no = emp_no;
+    public void setFromDate(LocalDate fromDate) {
+        this.fromDate = fromDate;
     }
 
     public int getSalary() {
@@ -29,19 +42,20 @@ public class Salary {
         this.salary = salary;
     }
 
-    public LocalDate getFrom_date() {
-        return from_date;
+    public LocalDate getToDate() {
+        return toDate;
     }
 
-    public void setFrom_date(LocalDate from_date) {
-        this.from_date = from_date;
+    public void setToDate(LocalDate toDate) {
+        this.toDate = toDate;
     }
 
-    public LocalDate getTo_date() {
-        return to_date;
+    public Employee getEmployee() {
+        return employee;
     }
 
-    public void setTo_date(LocalDate to_date) {
-        this.to_date = to_date;
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
+
 }

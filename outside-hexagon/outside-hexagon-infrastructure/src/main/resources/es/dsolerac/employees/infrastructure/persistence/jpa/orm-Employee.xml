@@ -18,7 +18,7 @@
         <table name="employees" schema="employees"  />
         <attributes>
 
-            <id name="id"><column name="emp_no"/></id>
+            <id name="idEmployee"><column name="emp_no"/></id>
 
             <basic name="birthDate"><column name="birth_date"/></basic>
             <basic name="firstName"><column name="first_name"/></basic>
@@ -28,6 +28,11 @@
             </basic>
 
             <basic name="hireDate"><column name="hire_date"/></basic>
+
+            <one-to-many name="salaries" mapped-by="employee">
+                <order-by/>
+            </one-to-many>
+
 
         </attributes>
 

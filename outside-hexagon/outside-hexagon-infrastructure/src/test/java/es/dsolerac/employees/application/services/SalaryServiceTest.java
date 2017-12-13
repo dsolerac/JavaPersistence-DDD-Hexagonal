@@ -2,8 +2,6 @@ package es.dsolerac.employees.application.services;
 
 
 import es.dsolerac.employees.domain.employee.repository.EmployeeRepository;
-import es.dsolerac.employees.infrastructure.persistence.springData.EmployeeDataRepository;
-import es.dsolerac.employees.infrastructure.persistence.springData.impl.EmployeeRepositoryImpl;
 import es.dsolerac.employees.infrastructure.spring.config.EmployeeConfig;
 import org.junit.After;
 import org.junit.Before;
@@ -16,8 +14,6 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDate;
-
 
 /**
  * Created by dsolerac on 14/06/17.
@@ -25,15 +21,12 @@ import java.time.LocalDate;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = EmployeeConfig.class)
 @Transactional
-public class EmployeeServiceTest {
+public class SalaryServiceTest {
 
 
     @Qualifier("employeeRepositoryImpl")
     @Autowired
     EmployeeRepository employeeRepository;
-
-//    @Autowired
-//    EmployeeRepositoryImpl employeeRepository;
 
     @Before
     public void setUp() throws Exception {
@@ -55,7 +48,7 @@ public class EmployeeServiceTest {
 
 
 //        System.out.println("#### 1 -->" + employeeRepository.count());
-//        System.out.println("#### 2 -->" + employeeRepository.find(10006));
+//        System.out.println("#### 2 -->" + employeeRepository.findOne(10006));
 //        System.out.println("#### 3 -->" + employeeRepository.findByfirstNameLike("martins%"));
 //        System.out.println("#### 4 -->" + employeeRepository.findByBirthDateAfter(LocalDate.parse("1965-01-31")) );
 //        System.out.println("#### 5 -->" + employeeRepository.countByBirthDateAfter(LocalDate.parse("1965-01-31")));

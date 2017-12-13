@@ -1,26 +1,30 @@
 package es.dsolerac.employees.domain.employee.entities;
 
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  * Created by dsolerac on 10/11/17.
  */
 public class Employee {
 
-    private int id;
+    private int idEmployee;
     private LocalDate birthDate;
     private String firstName;
     private String lastName;
     private Gender gender;
     private LocalDate hireDate;
 
+    private List<Salary> salaries;
 
-    public int getId() {
-        return id;
+
+
+    public int getIdEmployee() {
+        return idEmployee;
     }
 
-    public void setId(int emp_no) {
-        this.id = emp_no;
+    public void setIdEmployee(int emp_no) {
+        this.idEmployee = emp_no;
     }
 
     public LocalDate getBirthDate() {
@@ -63,11 +67,19 @@ public class Employee {
         this.hireDate = hire_date;
     }
 
+    public List<Salary> getSalaries() {
+        return salaries;
+    }
+
+    public void setSalaries(List<Salary> salaries) {
+        this.salaries = salaries;
+    }
+
 
     @Override
     public String toString() {
         return "Employee{" +
-                "id=" + id +
+                "id=" + idEmployee +
                 ", birthDate=" + birthDate +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +

@@ -10,6 +10,7 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
         <mapping-file>es/dsolerac/employees/infrastructure/persistence/jpa/orm-Employee.xml</mapping-file>
+        <mapping-file>es/dsolerac/employees/infrastructure/persistence/jpa/orm-Salary.xml</mapping-file>
 
         <properties>
 <!--

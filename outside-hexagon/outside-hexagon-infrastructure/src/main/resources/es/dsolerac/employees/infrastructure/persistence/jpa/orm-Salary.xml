@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings
+        xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm
+                            http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd"
+        version="2.1">
+
+    <description>OR Mapping</description>
+    <persistence-unit-metadata>
+        <xml-mapping-metadata-complete />
+        <persistence-unit-defaults><schema>employees</schema></persistence-unit-defaults>
+    </persistence-unit-metadata>
+
+    <package>es.dsolerac.employees.domain.employee.entities</package>
+    <schema>employees</schema>
+    <entity name="salaries" class="Salary" access="FIELD" metadata-complete="true">
+        <table name="salaries" schema="employees"  />
+
+         <attributes>
+
+             <id name="fromDate"><column name="from_date"/></id>
+
+            <!--<embedded-id name="salaryID" access="FIELD">-->
+                <!--<attribute-override name="idEmployee"><column name="emp_no"/></attribute-override>-->
+                <!--<attribute-override name="fromDate"><column name="from_date"/></attribute-override>-->
+            <!--</embedded-id>-->
+
+            <basic name="salary"><column name="salary"/></basic>
+            <basic name="toDate"><column name="to_date"/></basic>
+
+             <many-to-one name="employee" fetch="LAZY"  >
+                 <join-column name="emp_no" referenced-column-name="emp_no"/>
+             </many-to-one>
+
+
+         </attributes>
+
+    </entity>
+
+</entity-mappings>

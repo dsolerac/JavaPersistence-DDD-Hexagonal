@@ -8,6 +8,8 @@ import es.dsolerac.employees.domain.employee.entities.QEmployee;
 import es.dsolerac.employees.domain.employee.repository.EmployeeRepository;
 import es.dsolerac.employees.infrastructure.persistence.springData.EmployeeDataRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,7 +29,7 @@ import java.util.List;
  */
 @Repository
 @Transactional
-public class EmployeeRepositoryImpl  implements EmployeeRepository<Employee, Integer> {
+public class EmployeeRepositoryImpl implements  EmployeeRepository<Employee, Integer>  {
 
 
     @Autowired
@@ -99,6 +101,7 @@ public class EmployeeRepositoryImpl  implements EmployeeRepository<Employee, Int
         return (long)count;
 
     }
+
 
 
 }
