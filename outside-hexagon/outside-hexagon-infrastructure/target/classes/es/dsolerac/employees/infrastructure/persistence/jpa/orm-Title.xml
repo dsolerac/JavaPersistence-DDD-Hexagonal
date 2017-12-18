@@ -14,14 +14,20 @@
 
     <package>es.dsolerac.employees.domain.employee.entities</package>
     <schema>employees</schema>
-    <entity name="salaries" class="Salary" access="FIELD" metadata-complete="true">
-        <table name="salaries" schema="employees"  />
+    <entity name="titles" class="Title" access="FIELD" metadata-complete="true">
+        <table name="titles" schema="employees"  />
 
          <attributes>
 
-             <id name="fromDate"><column name="from_date"/></id>
+             <embedded-id name="titleID" access="FIELD">
+                <attribute-override name="title"><column name="title"/></attribute-override>
+                <attribute-override name="fromDate"><column name="from_date"/></attribute-override>
+             </embedded-id>
 
-            <basic name="salary"><column name="salary"/></basic>
+             <!--<id name="fromDate"><column name="from_date"/></id>-->
+
+             <!--<basic name="title"><column name="title"/></basic>-->
+
             <basic name="toDate"><column name="to_date"/></basic>
 
              <many-to-one name="employee" fetch="LAZY"  >

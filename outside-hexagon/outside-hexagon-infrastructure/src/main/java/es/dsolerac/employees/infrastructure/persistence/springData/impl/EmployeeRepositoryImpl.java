@@ -10,6 +10,7 @@ import es.dsolerac.employees.infrastructure.persistence.springData.EmployeeDataR
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,7 +24,9 @@ import java.time.LocalDate;
 import java.util.List;
 
 /**
- * Esta es la implementación del repositorio definido en el dominio
+ * Esta es la implementación del repositorio definido en el dominio.
+ *
+ *
  *
  * Created by dsolerac on 1/12/17.
  */
@@ -58,7 +61,7 @@ public class EmployeeRepositoryImpl implements  EmployeeRepository<Employee, Int
     }
 
     @Override
-    public long countByGender() {
+    public long countByGender(Gender gender) {
 
         System.out.println("###### ini ######## JQL");
         Query emQuery = em.createQuery("SELECT COUNT (e) FROM employees e WHERE e.gender = :gender");

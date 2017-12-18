@@ -33,6 +33,9 @@
                 <order-by/>
             </one-to-many>
 
+            <one-to-many name="titles" mapped-by="employee">
+                <order-by/>
+            </one-to-many>
 
         </attributes>
 

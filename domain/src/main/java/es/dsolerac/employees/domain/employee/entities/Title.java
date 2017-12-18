@@ -1,5 +1,7 @@
 package es.dsolerac.employees.domain.employee.entities;
 
+import es.dsolerac.employees.domain.employee.entities.composedIds.TitleID;
+
 import java.time.LocalDate;
 
 /**
@@ -7,44 +9,63 @@ import java.time.LocalDate;
  */
 public class Title {
 
-    private Employee emp_no;
-    private Title title;
-    private LocalDate from_date;
-    private LocalDate to_date;
+    private Employee employee;
+
+    private TitleID titleID;
+//    private String title;
+//    private LocalDate fromDate;
+    private LocalDate toDate;
 
 
 
-
-    public Employee getEmp_no() {
-        return emp_no;
+    public Employee getEmployee() {
+        return employee;
     }
 
-    public void setEmp_no(Employee emp_no) {
-        this.emp_no = emp_no;
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
 
-    public Title getTitle() {
-        return title;
+    public TitleID getTitleID() {
+        return titleID;
     }
 
-    public void setTitle(Title title) {
-        this.title = title;
+    public void setTitleID(TitleID titleID) {
+        this.titleID = titleID;
     }
 
-    public LocalDate getFrom_date() {
-        return from_date;
+    //    public String getTitle() {
+//        return title;
+//    }
+//
+//    public void setTitle(String title) {
+//        this.title = title;
+//    }
+//
+//    public LocalDate getFromDate() {
+//        return fromDate;
+//    }
+//
+//    public void setFromDate(LocalDate fromDate) {
+//        this.fromDate = fromDate;
+//    }
+
+    public LocalDate getToDate() {
+        return toDate;
     }
 
-    public void setFrom_date(LocalDate from_date) {
-        this.from_date = from_date;
+    public void setToDate(LocalDate toDate) {
+        this.toDate = toDate;
     }
 
-    public LocalDate getTo_date() {
-        return to_date;
-    }
 
-    public void setTo_date(LocalDate to_date) {
-        this.to_date = to_date;
+    @Override
+    public String toString() {
+        return "Title{" +
+                "employee=" + employee +
+                ", title='" + titleID.getTitle() + '\'' +
+                ", fromDate=" + titleID.getFromDate() +
+                ", toDate=" + toDate +
+                '}';
     }
-
 }

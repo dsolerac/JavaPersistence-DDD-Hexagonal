@@ -16,6 +16,7 @@ public class Employee {
     private LocalDate hireDate;
 
     private List<Salary> salaries;
+    private List<Title> titles;
 
 
 
@@ -67,12 +68,21 @@ public class Employee {
         this.hireDate = hire_date;
     }
 
+
     public List<Salary> getSalaries() {
         return salaries;
     }
 
     public void setSalaries(List<Salary> salaries) {
         this.salaries = salaries;
+    }
+
+    public List<Title> getTitles() {
+        return titles;
+    }
+
+    public void setTitles(List<Title> titles) {
+        this.titles = titles;
     }
 
 

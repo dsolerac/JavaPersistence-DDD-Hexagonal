@@ -21,11 +21,6 @@
 
              <id name="fromDate"><column name="from_date"/></id>
 
-            <!--<embedded-id name="salaryID" access="FIELD">-->
-                <!--<attribute-override name="idEmployee"><column name="emp_no"/></attribute-override>-->
-                <!--<attribute-override name="fromDate"><column name="from_date"/></attribute-override>-->
-            <!--</embedded-id>-->
-
             <basic name="salary"><column name="salary"/></basic>
             <basic name="toDate"><column name="to_date"/></basic>
 

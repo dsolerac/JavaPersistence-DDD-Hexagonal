@@ -1,7 +1,5 @@
 package es.dsolerac.employees.domain.employee.entities;
 
-import es.dsolerac.employees.domain.employee.entities.composedIds.SalaryID;
-
 import java.time.LocalDate;
 
 /**
@@ -9,22 +7,13 @@ import java.time.LocalDate;
  */
 public class Salary {
 
-
-
-    //    private SalaryID salaryID;
-    private LocalDate fromDate;
-    private int salary;
-    private LocalDate toDate;
     private Employee employee;
 
 
-//    public SalaryID getSalaryID() {
-//        return salaryID;
-//    }
+    private LocalDate fromDate;
+    private int salary;
+    private LocalDate toDate;
 
-//    public void setSalaryID(SalaryID salaryID) {
-//        this.salaryID = salaryID;
-//    }
 
     public LocalDate getFromDate() {
         return fromDate;
@@ -58,4 +47,14 @@ public class Salary {
         this.employee = employee;
     }
 
+
+    @Override
+    public String toString() {
+        return "Salary{" +
+                "fromDate=" + fromDate +
+                ", salary=" + salary +
+                ", toDate=" + toDate +
+                ", employee=" + employee +
+                '}';
+    }
 }

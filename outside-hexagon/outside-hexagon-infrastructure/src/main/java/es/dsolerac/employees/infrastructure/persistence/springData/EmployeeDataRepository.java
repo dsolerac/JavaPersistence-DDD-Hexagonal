@@ -1,12 +1,18 @@
 package es.dsolerac.employees.infrastructure.persistence.springData;
 
+import com.querydsl.jpa.impl.JPAQueryFactory;
 import es.dsolerac.employees.domain.employee.entities.Employee;
+import es.dsolerac.employees.domain.employee.entities.Gender;
+import es.dsolerac.employees.domain.employee.entities.QEmployee;
+import es.dsolerac.employees.domain.employee.repository.CrudRepository;
 import es.dsolerac.employees.domain.employee.repository.EmployeeRepository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -20,8 +26,10 @@ public interface EmployeeDataRepository<T, ID> extends JpaRepository<Employee, I
     @Query("SELECT COUNT (e) FROM employees e WHERE e.birthDate > :localDate")
     public List<Employee> countByBirthDateAfter(@Param("localDate") LocalDate localDate);
 
-    public default long countByGender(){
+//    public long countByGender(@Param("gender") Gender gender);
 
+//    public long countByGender(@Param("gender") Gender gender)
+//    {
         //El nombre del método, al no ser reconocible por Spring data Jpa, éste  no puede proveer una implementación por defecto
         //para él de forma automática, por tanto se precisa de una implementación para él. Por suerte con Java 8 se puede
         //hacer uso de los métodos por defecto en las interfaces y así evitar crear una clase EmployeeDataRepositoryImpl
@@ -40,9 +48,13 @@ public interface EmployeeDataRepository<T, ID> extends JpaRepository<Employee, I
 
 
 
-        throw new RuntimeException("Do not have to be invoked this method, instead use an instance of EmployeeRepositoryImpl");
+       // throw new RuntimeException("Do not have to be invoked this method, instead use an instance of EmployeeRepositoryImpl");
 
-    }
+
+//    }
+
+
+
 
 
 

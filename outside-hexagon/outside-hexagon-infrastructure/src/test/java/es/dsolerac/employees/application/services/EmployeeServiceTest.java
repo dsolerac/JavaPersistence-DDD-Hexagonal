@@ -1,6 +1,8 @@
 package es.dsolerac.employees.application.services;
 
 
+import es.dsolerac.employees.domain.employee.entities.Employee;
+import es.dsolerac.employees.domain.employee.entities.Gender;
 import es.dsolerac.employees.domain.employee.repository.EmployeeRepository;
 import es.dsolerac.employees.infrastructure.persistence.springData.EmployeeDataRepository;
 import es.dsolerac.employees.infrastructure.persistence.springData.impl.EmployeeRepositoryImpl;
@@ -12,11 +14,13 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
+import java.util.Optional;
 
 
 /**
@@ -28,12 +32,19 @@ import java.time.LocalDate;
 public class EmployeeServiceTest {
 
 
-    @Qualifier("employeeRepositoryImpl")
-    @Autowired
-    EmployeeRepository employeeRepository;
+//    @Qualifier("employeeDataRepository")
+//    @Autowired
+//    EmployeeRepository employeeRepository;
 
 //    @Autowired
 //    EmployeeRepositoryImpl employeeRepository;
+
+    @Autowired
+    EmployeeDataRepository employeeRepository;
+
+//    @Qualifier("employeeRepositoryImpl")
+//    @Autowired
+//    EmployeeDataRepository employeeRepository;
 
     @Before
     public void setUp() throws Exception {
@@ -50,6 +61,9 @@ public class EmployeeServiceTest {
     @Test
     public void count(){
 
+//        EmployeeDataRepository edr = (EmployeeDataRepository) employeeRepository;
+//        edr.findById(10006);
+
 //        System.out.println("#### -->" + entityManagerFactory.createEntityManager().find(Employee.class,10006) );
 //        System.out.println("#### -->" + entityManagerFactory.createEntityManager().find(Employee.class,10006) );
 
@@ -59,10 +73,15 @@ public class EmployeeServiceTest {
 //        System.out.println("#### 3 -->" + employeeRepository.findByfirstNameLike("martins%"));
 //        System.out.println("#### 4 -->" + employeeRepository.findByBirthDateAfter(LocalDate.parse("1965-01-31")) );
 //        System.out.println("#### 5 -->" + employeeRepository.countByBirthDateAfter(LocalDate.parse("1965-01-31")));
+//        System.out.println("#### 6 -->" + employeeRepository.countByGender(Gender.F));
 
-//        System.out.println("#### 6 -->" + employeeRepository.countByGender());
 
-//        service.count();
+        Optional<Employee> employeeOptional = employeeRepository.findById(10009);
+        Employee employee = employeeOptional.get();
+
+        System.out.println("#### 7 -->" + employee.getTitles() );
+
+
 
 
     }
