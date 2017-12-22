@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings
+        xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm
+                            http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd"
+        version="2.1">
+
+    <description>OR Mapping</description>
+    <persistence-unit-metadata>
+        <xml-mapping-metadata-complete />
+    </persistence-unit-metadata>
+
+    <package>es.dsolerac.employees.domain.employee.entities</package>
+    <schema>employees</schema>
+
+    <entity name="departments" class="es.dsolerac.employees.domain.employee.entities.Department" access="FIELD" metadata-complete="true">
+        <table name="departments" schema="employees"  />
+        <attributes>
+
+            <id name="idDepartment"><column name="dept_no"/></id>
+
+            <basic name="name"><column name="dept_name"/></basic>
+
+
+            <!--La relación many-to-many, sirve para los casos en los que la tabla de muchos a muchos no tiene campos extra más allá de
+                  los campos implicados en la relación-->
+            <!--<many-to-many name="employees" mapped-by="deparments"/>-->
+
+
+            <one-to-many name="employeeDepartments" mapped-by="employeeDepartmentID.department" fetch="LAZY" >
+                <cascade><cascade-all/></cascade>
+                <order-by/>
+            </one-to-many>
+
+            <one-to-many name="managerDepartments" mapped-by="employeeDepartmentID.department" fetch="LAZY" >
+                <cascade><cascade-all/></cascade>
+                <order-by/>
+            </one-to-many>
+
+        </attributes>
+
+    </entity>
+
+</entity-mappings>

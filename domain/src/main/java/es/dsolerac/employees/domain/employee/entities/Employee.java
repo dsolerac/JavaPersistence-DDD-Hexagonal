@@ -18,6 +18,9 @@ public class Employee {
     private List<Salary> salaries;
     private List<Title> titles;
 
+    private List<EmployeeDepartment> employeeDepartments;
+    private List<EmployeeDepartment> managerDepartments;
+
 
 
     public int getIdEmployee() {
@@ -69,6 +72,7 @@ public class Employee {
     }
 
 
+
     public List<Salary> getSalaries() {
         return salaries;
     }
@@ -84,6 +88,45 @@ public class Employee {
     public void setTitles(List<Title> titles) {
         this.titles = titles;
     }
+
+
+
+    public List<EmployeeDepartment> getManagerDepartments() {
+        return managerDepartments;
+    }
+
+    public void setManagerDepartments(List<EmployeeDepartment> managerDepartments) {
+        this.managerDepartments = managerDepartments;
+    }
+
+    public List<EmployeeDepartment> getEmployeeDepartments() {
+        return employeeDepartments;
+    }
+
+    public void setEmployeeDepartments(List<EmployeeDepartment> employeeDepartments) {
+        this.employeeDepartments = employeeDepartments;
+    }
+
+
+
+/*    private List<Department> deparments;
+    private List<Department> deparmentsManagers;
+
+    public List<Department> getDeparments() {
+        return deparments;
+    }
+
+    public void setDeparments(List<Department> deparments) {
+        this.deparments = deparments;
+    }
+
+    public List<Department> getDeparmentsManagers() {
+        return deparmentsManagers;
+    }
+
+    public void setDeparmentsManagers(List<Department> deparmentsManagers) {
+        this.deparmentsManagers = deparmentsManagers;
+    }*/
 
 
     @Override

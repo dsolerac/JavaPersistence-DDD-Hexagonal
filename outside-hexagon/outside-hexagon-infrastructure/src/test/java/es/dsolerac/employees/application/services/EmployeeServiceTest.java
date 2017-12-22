@@ -2,10 +2,7 @@ package es.dsolerac.employees.application.services;
 
 
 import es.dsolerac.employees.domain.employee.entities.Employee;
-import es.dsolerac.employees.domain.employee.entities.Gender;
-import es.dsolerac.employees.domain.employee.repository.EmployeeRepository;
 import es.dsolerac.employees.infrastructure.persistence.springData.EmployeeDataRepository;
-import es.dsolerac.employees.infrastructure.persistence.springData.impl.EmployeeRepositoryImpl;
 import es.dsolerac.employees.infrastructure.spring.config.EmployeeConfig;
 import org.junit.After;
 import org.junit.Before;
@@ -13,13 +10,10 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDate;
 import java.util.Optional;
 
 
@@ -76,10 +70,19 @@ public class EmployeeServiceTest {
 //        System.out.println("#### 6 -->" + employeeRepository.countByGender(Gender.F));
 
 
-        Optional<Employee> employeeOptional = employeeRepository.findById(10009);
+        Optional<Employee> employeeOptional = employeeRepository.findById(10488);
         Employee employee = employeeOptional.get();
+        System.out.println("#### 7 -->" + employee.getEmployeeDepartments());
 
-        System.out.println("#### 7 -->" + employee.getTitles() );
+
+        employeeOptional = employeeRepository.findById(110183);
+        employee = employeeOptional.get();
+        System.out.println("#### 8 -->" + employee.getManagerDepartments() );
+
+
+
+        //Este método se usaba cuando la relación era de muchos a muchos sin campos en la tabla intermedia
+//        System.out.println("#### 7 -->" + employee.getDeparmentsManagers() );
 
 
 

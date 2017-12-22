@@ -21,9 +21,11 @@
 
              <id name="fromDate"><column name="from_date"/></id>
 
-            <basic name="salary"><column name="salary"/></basic>
-            <basic name="toDate"><column name="to_date"/></basic>
+             <basic name="salary"><column name="salary"/></basic>
+             <basic name="toDate"><column name="to_date"/></basic>
 
+             <!--El campo employee es PK de la tabla, pero no puede ser definda como id, porque tiene que ser definia en la
+             relación many-to-one y no puede estar definida en ambos casos-->
              <many-to-one name="employee" fetch="LAZY"  >
                  <join-column name="emp_no" referenced-column-name="emp_no"/>
              </many-to-one>

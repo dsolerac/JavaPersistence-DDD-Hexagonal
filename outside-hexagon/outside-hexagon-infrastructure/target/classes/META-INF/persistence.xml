@@ -12,6 +12,9 @@
         <mapping-file>es/dsolerac/employees/infrastructure/persistence/jpa/orm-Employee.xml</mapping-file>
         <mapping-file>es/dsolerac/employees/infrastructure/persistence/jpa/orm-Salary.xml</mapping-file>
         <mapping-file>es/dsolerac/employees/infrastructure/persistence/jpa/orm-Title.xml</mapping-file>
+        <mapping-file>es/dsolerac/employees/infrastructure/persistence/jpa/orm-Department.xml</mapping-file>
+        <mapping-file>es/dsolerac/employees/infrastructure/persistence/jpa/orm-EmployeeDepartment.xml</mapping-file>
+        <mapping-file>es/dsolerac/employees/infrastructure/persistence/jpa/orm-ManagerDepartment.xml</mapping-file>
 
         <properties>
 <!--

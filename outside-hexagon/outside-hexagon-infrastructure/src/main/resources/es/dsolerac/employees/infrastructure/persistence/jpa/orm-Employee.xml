@@ -14,7 +14,7 @@
     <package>es.dsolerac.employees.domain.employee.entities</package>
     <schema>employees</schema>
 
-    <entity name="employees" class="Employee" access="PROPERTY" metadata-complete="true">
+    <entity name="employees" class="Employee" access="FIELD" metadata-complete="true">
         <table name="employees" schema="employees"  />
         <attributes>
 
@@ -34,6 +34,40 @@
             </one-to-many>
 
             <one-to-many name="titles" mapped-by="employee">
+                <order-by/>
+            </one-to-many>
+
+
+            <!--La relación many-to-many, sirve para los casos en los que la tabla de muchos a muchos no tiene campos extra más allá de
+            los campos implicados en la relación-->
+<!--            <many-to-many name="deparments">
+                <cascade>
+                    <cascade-persist/>
+                    <cascade-merge/>
+                </cascade>
+                <join-table name="dept_emp" schema="employees">
+                    <join-column name="emp_no"/>
+                    <inverse-join-column name="dept_no"/>
+                </join-table>
+            </many-to-many>
+
+            <many-to-many name="deparmentsManagers">
+                <cascade>
+                    <cascade-persist/>
+                    <cascade-merge/>
+                </cascade>
+                <join-table name="dept_manager" schema="employees">
+                    <join-column name="emp_no"/>
+                    <inverse-join-column name="dept_no"/>
+                </join-table>
+            </many-to-many>-->
+
+            <one-to-many name="employeeDepartments" mapped-by="employeeDepartmentID.employee" fetch="LAZY" >
+                <cascade><cascade-all/></cascade>
+                <order-by/>
+            </one-to-many>
+            <one-to-many name="managerDepartments" mapped-by="employeeDepartmentID.employee" fetch="LAZY" >
+                <cascade><cascade-all/></cascade>
                 <order-by/>
             </one-to-many>
 

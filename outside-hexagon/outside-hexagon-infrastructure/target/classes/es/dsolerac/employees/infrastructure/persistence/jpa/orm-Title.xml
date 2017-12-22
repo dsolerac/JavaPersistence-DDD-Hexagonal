@@ -14,6 +14,7 @@
 
     <package>es.dsolerac.employees.domain.employee.entities</package>
     <schema>employees</schema>
+
     <entity name="titles" class="Title" access="FIELD" metadata-complete="true">
         <table name="titles" schema="employees"  />
 
@@ -24,16 +25,11 @@
                 <attribute-override name="fromDate"><column name="from_date"/></attribute-override>
              </embedded-id>
 
-             <!--<id name="fromDate"><column name="from_date"/></id>-->
-
-             <!--<basic name="title"><column name="title"/></basic>-->
-
             <basic name="toDate"><column name="to_date"/></basic>
 
              <many-to-one name="employee" fetch="LAZY"  >
                  <join-column name="emp_no" referenced-column-name="emp_no"/>
              </many-to-one>
-
 
          </attributes>
 
