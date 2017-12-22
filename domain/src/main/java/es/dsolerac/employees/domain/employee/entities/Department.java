@@ -11,7 +11,7 @@ public class Department {
     private String name;
 
     private List<EmployeeDepartment> employeeDepartments;
-    private List<EmployeeDepartment> managerDepartments;
+    private List<ManagerDepartment> managerDepartments;
 
 
 
@@ -31,18 +31,7 @@ public class Department {
         this.name = dept_name;
     }
 
-
-    /*private List<Employee> employees;
-
-    public List<Employee> getEmployees() {
-        return employees;
-    }
-
-    public void setEmployees(List<Employee> employees) {
-        this.employees = employees;
-    }*/
-
-
+    
     public List<EmployeeDepartment> getEmployeeDepartments() {
         return employeeDepartments;
     }
@@ -51,11 +40,11 @@ public class Department {
         this.employeeDepartments = employeeDepartments;
     }
 
-    public List<EmployeeDepartment> getManagerDepartments() {
+    public List<ManagerDepartment> getManagerDepartments() {
         return managerDepartments;
     }
 
-    public void setManagerDepartments(List<EmployeeDepartment> managerDepartments) {
+    public void setManagerDepartments(List<ManagerDepartment> managerDepartments) {
         this.managerDepartments = managerDepartments;
     }
 

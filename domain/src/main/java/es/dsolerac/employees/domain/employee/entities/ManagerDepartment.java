@@ -1,6 +1,7 @@
 package es.dsolerac.employees.domain.employee.entities;
 
 import es.dsolerac.employees.domain.employee.entities.composedIds.EmployeeDepartmentID;
+import es.dsolerac.employees.domain.employee.entities.composedIds.ManagerDepartmentID;
 
 import java.time.LocalDate;
 
@@ -14,12 +15,12 @@ public class ManagerDepartment {
     private LocalDate fromDate;
     private LocalDate toDate;
 
-    private EmployeeDepartmentID employeeDepartmentID = new EmployeeDepartmentID();
+    private ManagerDepartmentID managerDepartmentID = new ManagerDepartmentID();
 
 
 
-    public EmployeeDepartmentID getEmployeeDepartmentID() {
-        return employeeDepartmentID;
+    public ManagerDepartmentID getManagerDepartmentID() {
+        return managerDepartmentID;
     }
 
 
@@ -46,25 +47,25 @@ public class ManagerDepartment {
     //de la clave primaria que se encuentran en la clase EmployeeDepartmentID.
     //###########################################################################################################
 
-    public void setEmployeeDepartmentID(EmployeeDepartmentID employeeDepartmentID) {
-        this.employeeDepartmentID = employeeDepartmentID;
+    public void setManagerDepartmentID(ManagerDepartmentID managerDepartmentID) {
+        this.managerDepartmentID = managerDepartmentID;
     }
 
 
     public Employee getEmployee() {
-        return employeeDepartmentID.getEmployee();
+        return managerDepartmentID.getEmployee();
     }
 
     public void setEmployee(Employee employee) {
-        employeeDepartmentID.setEmployee(employee);
+        managerDepartmentID.setEmployee(employee);
     }
 
     public Department getDeparment() {
-        return employeeDepartmentID.getDepartment();
+        return managerDepartmentID.getDepartment();
     }
 
     public void setDeparment(Department department) {
-        employeeDepartmentID.setDepartment(department);
+        managerDepartmentID.setDepartment(department);
     }
 
 
@@ -73,7 +74,7 @@ public class ManagerDepartment {
         return "EmployeeDepartment{" +
                 "fromDate=" + fromDate +
                 ", toDate=" + toDate +
-                ", employeeDepartmentID=" + employeeDepartmentID +
+                ", employeeDepartmentID=" + managerDepartmentID +
                 '}';
     }
 }

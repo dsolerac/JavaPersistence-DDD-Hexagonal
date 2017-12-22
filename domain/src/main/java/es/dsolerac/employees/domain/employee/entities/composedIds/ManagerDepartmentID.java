@@ -32,7 +32,7 @@ public class ManagerDepartmentID implements Serializable {
 
     @Override
     public String toString() {
-        return "EmployeeDepartmentID{" +
+        return "ManagerDepartmentID{" +
                 "employee=" + employee +
                 ", department=" + department +
                 '}';

@@ -32,7 +32,7 @@
 
         <attributes>
 
-            <embedded-id name="employeeDepartmentID" access="FIELD">
+            <embedded-id name="managerDepartmentID" access="FIELD">
                 <!--<attribute-override name="employeeDepartmentID.employee"><column  name="emp_no" table="dept_emp" /></attribute-override>
                 <attribute-override name="employeeDepartmentID.department"><column name="dept_no" table="dept_emp" /></attribute-override>-->
             </embedded-id>

@@ -33,7 +33,7 @@
                 <order-by/>
             </one-to-many>
 
-            <one-to-many name="managerDepartments" mapped-by="employeeDepartmentID.department" fetch="LAZY" >
+            <one-to-many name="managerDepartments" mapped-by="managerDepartmentID.department" fetch="LAZY" >
                 <cascade><cascade-all/></cascade>
                 <order-by/>
             </one-to-many>
