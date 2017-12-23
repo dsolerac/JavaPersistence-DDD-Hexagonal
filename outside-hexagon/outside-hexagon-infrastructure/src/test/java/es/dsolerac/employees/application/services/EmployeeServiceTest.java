@@ -2,15 +2,12 @@ package es.dsolerac.employees.application.services;
 
 
 import es.dsolerac.employees.domain.employee.entities.*;
-import es.dsolerac.employees.domain.employee.entities.composedIds.EmployeeDepartmentID;
 import es.dsolerac.employees.domain.employee.entities.composedIds.TitleID;
 import es.dsolerac.employees.domain.employee.repository.EmployeeRepository;
-import es.dsolerac.employees.infrastructure.persistence.springData.DepartmentDataRepository;
-import es.dsolerac.employees.infrastructure.persistence.springData.EmployeeDataRepository;
+import es.dsolerac.employees.infrastructure.persistence.springData.impl.DepartmentDataRepository;
 import es.dsolerac.employees.infrastructure.spring.config.EmployeeConfig;
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,11 +34,13 @@ public class EmployeeServiceTest {
 /*    @Autowired
     EmployeeDataRepository employeeRepository;*/
 
+    @Qualifier("departmentDataRepository")
     @Autowired
     DepartmentDataRepository departmentRepository;
 
 
-    @Qualifier("employeeRepositoryImpl")
+//    @Qualifier("employeeRepositoryImpl")
+    @Qualifier("EmployeeRepository")
     @Autowired
     EmployeeRepository employeeRepository;
 

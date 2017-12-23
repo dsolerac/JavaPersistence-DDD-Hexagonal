@@ -1,5 +1,6 @@
 package es.dsolerac.employees.infrastructure.spring.config;
 
+import es.dsolerac.employees.infrastructure.persistence.springData.BaseRepositoryImpl;
 import es.dsolerac.employees.infrastructure.spring.BeanNames;
 import org.apache.commons.dbcp.BasicDataSource;
 import org.apache.logging.log4j.LogManager;
@@ -11,7 +12,6 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaDialect;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
@@ -21,8 +21,6 @@ import org.springframework.orm.jpa.vendor.HibernateJpaDialect;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
 /**
@@ -31,7 +29,9 @@ import javax.sql.DataSource;
 @Configuration
 @EnableTransactionManagement
 @PropertySource({ "classpath:jdbc.properties" })
-@EnableJpaRepositories(basePackages = "es.dsolerac.employees.infrastructure.persistence.springData" )
+@EnableJpaRepositories( basePackages = "es.dsolerac.employees.infrastructure.persistence.springData.impl"
+                      //  , repositoryBaseClass= BaseRepositoryImpl.class
+                      )
 public class PersistenceConfig {
 
     private static final Logger LOG = LogManager.getLogger(PersistenceConfig.class);

@@ -1,8 +1,13 @@
 package es.dsolerac.employees.infrastructure.spring.config;
 
+import es.dsolerac.employees.domain.employee.repository.EmployeeRepository;
+import es.dsolerac.employees.infrastructure.persistence.springData.impl.EmployeeDataRepository;
+import es.dsolerac.employees.infrastructure.persistence.springData.impl.EmployeeRepositoryImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
@@ -10,7 +15,7 @@ import org.springframework.context.annotation.Import;
  * Created by dsolerac on 14/06/17.
  */
 @Configuration
-@ComponentScan({"es.dsolerac.employees.infrastructure.persistence.springData"})
+//@ComponentScan({"es.dsolerac.employees.infrastructure.persistence.springData"})
 @Import({PersistenceConfig.class})
 public class EmployeeConfig {
 
@@ -21,9 +26,9 @@ public class EmployeeConfig {
 
         private final Logger LOG = LogManager.getLogger(UserRegistry.class);
 
-
-//        @Autowired
-//        private EmployeeRepository employeeRepository;
+        @Qualifier("employeeDataRepository")
+        @Autowired
+        private EmployeeDataRepository employeeDataRepository;
 
 
         //Domain layer
@@ -44,6 +49,15 @@ public class EmployeeConfig {
 //            Employee employee = new Employee();
 //            return employee;
 //        }
+
+        @Bean(name = "EmployeeRepository")
+        public EmployeeRepository employeeRepository(){
+
+            EmployeeRepository em = new EmployeeRepositoryImpl(employeeDataRepository);
+
+            return em;
+        }
+
 
     }
 

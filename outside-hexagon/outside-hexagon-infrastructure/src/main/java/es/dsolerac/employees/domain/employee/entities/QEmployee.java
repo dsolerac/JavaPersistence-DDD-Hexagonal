@@ -7,6 +7,7 @@ import com.querydsl.core.types.dsl.*;
 import com.querydsl.core.types.PathMetadata;
 import javax.annotation.Generated;
 import com.querydsl.core.types.Path;
+import com.querydsl.core.types.dsl.PathInits;
 
 
 /**
@@ -21,15 +22,23 @@ public class QEmployee extends EntityPathBase<Employee> {
 
     public final DatePath<java.time.LocalDate> birthDate = createDate("birthDate", java.time.LocalDate.class);
 
+    public final ListPath<EmployeeDepartment, QEmployeeDepartment> employeeDepartments = this.<EmployeeDepartment, QEmployeeDepartment>createList("employeeDepartments", EmployeeDepartment.class, QEmployeeDepartment.class, PathInits.DIRECT2);
+
     public final StringPath firstName = createString("firstName");
 
     public final EnumPath<Gender> gender = createEnum("gender", Gender.class);
 
     public final DatePath<java.time.LocalDate> hireDate = createDate("hireDate", java.time.LocalDate.class);
 
-    public final NumberPath<Integer> id = createNumber("id", Integer.class);
+    public final NumberPath<Integer> idEmployee = createNumber("idEmployee", Integer.class);
 
     public final StringPath lastName = createString("lastName");
+
+    public final ListPath<ManagerDepartment, QManagerDepartment> managerDepartments = this.<ManagerDepartment, QManagerDepartment>createList("managerDepartments", ManagerDepartment.class, QManagerDepartment.class, PathInits.DIRECT2);
+
+    public final ListPath<Salary, QSalary> salaries = this.<Salary, QSalary>createList("salaries", Salary.class, QSalary.class, PathInits.DIRECT2);
+
+    public final ListPath<Title, QTitle> titles = this.<Title, QTitle>createList("titles", Title.class, QTitle.class, PathInits.DIRECT2);
 
     public QEmployee(String variable) {
         super(Employee.class, forVariable(variable));
