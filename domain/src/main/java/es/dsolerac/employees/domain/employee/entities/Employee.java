@@ -19,7 +19,7 @@ public class Employee {
     private List<Title> titles;
 
     private List<EmployeeDepartment> employeeDepartments;
-    private List<EmployeeDepartment> managerDepartments;
+    private List<ManagerDepartment> managerDepartments;
 
 
 
@@ -91,11 +91,11 @@ public class Employee {
 
 
 
-    public List<EmployeeDepartment> getManagerDepartments() {
+    public List<ManagerDepartment> getManagerDepartments() {
         return managerDepartments;
     }
 
-    public void setManagerDepartments(List<EmployeeDepartment> managerDepartments) {
+    public void setManagerDepartments(List<ManagerDepartment> managerDepartments) {
         this.managerDepartments = managerDepartments;
     }
 

@@ -30,10 +30,12 @@
             <basic name="hireDate"><column name="hire_date"/></basic>
 
             <one-to-many name="salaries" mapped-by="employee">
+                <cascade><cascade-all/></cascade>
                 <order-by/>
             </one-to-many>
 
             <one-to-many name="titles" mapped-by="employee">
+                <cascade><cascade-all/></cascade>
                 <order-by/>
             </one-to-many>
 
@@ -66,7 +68,7 @@
                 <cascade><cascade-all/></cascade>
                 <order-by/>
             </one-to-many>
-            <one-to-many name="managerDepartments" mapped-by="employeeDepartmentID.employee" fetch="LAZY" >
+            <one-to-many name="managerDepartments" mapped-by="managerDepartmentID.employee" fetch="LAZY" >
                 <cascade><cascade-all/></cascade>
                 <order-by/>
             </one-to-many>

@@ -1,7 +1,6 @@
 package es.dsolerac.employees.domain.employee.repository;
 
 import es.dsolerac.employees.domain.employee.entities.Gender;
-import es.dsolerac.employees.domain.employee.entities.Salary;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -26,8 +25,6 @@ public interface EmployeeRepository<Employee, Integer>  {
     public List<Employee> countByBirthDateAfter(LocalDate localDate);
 
     public long countByGender(Gender gender);
-
-
 
 
 }

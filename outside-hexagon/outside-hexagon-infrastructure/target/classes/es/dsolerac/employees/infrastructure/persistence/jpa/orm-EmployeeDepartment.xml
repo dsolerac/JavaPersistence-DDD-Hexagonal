@@ -19,8 +19,14 @@
 
     <embeddable  class="es.dsolerac.employees.domain.employee.entities.composedIds.EmployeeDepartmentID" access="FIELD">
         <attributes>
-            <many-to-one name="employee" fetch="LAZY"><join-column name="emp_no" referenced-column-name="emp_no" /></many-to-one>
-            <many-to-one name="department"><join-column name="dept_no" referenced-column-name="dept_no"/></many-to-one>
+            <many-to-one name="employee" fetch="LAZY" >
+                <join-column name="emp_no" referenced-column-name="emp_no" />
+                <cascade><cascade-all/></cascade>
+            </many-to-one>
+            <many-to-one name="department" fetch="LAZY" >
+                <join-column name="dept_no" referenced-column-name="dept_no" />
+                <cascade><cascade-all/></cascade>
+            </many-to-one>
         </attributes>
         <description></description>
     </embeddable>
@@ -29,8 +35,8 @@
 
         <table name="dept_emp" schema="employees"/>
 
-        <association-override name="getEmployee"><join-column name="emp_no" table="dept_emp" /></association-override>
-        <association-override name="getDeparment"><join-column name="dept_no" table="dept_emp"/></association-override>
+        <association-override name="employee"><join-column name="emp_no" table="dept_emp"  /> </association-override>
+        <association-override name="department"><join-column name="dept_no" table="dept_emp"/></association-override>
 
         <attributes>
 

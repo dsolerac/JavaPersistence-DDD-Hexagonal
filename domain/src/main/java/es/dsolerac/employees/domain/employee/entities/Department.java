@@ -31,7 +31,7 @@ public class Department {
         this.name = dept_name;
     }
 
-    
+
     public List<EmployeeDepartment> getEmployeeDepartments() {
         return employeeDepartments;
     }

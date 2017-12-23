@@ -9,7 +9,6 @@ public class Salary {
 
     private Employee employee;
 
-
     private LocalDate fromDate;
     private int salary;
     private LocalDate toDate;

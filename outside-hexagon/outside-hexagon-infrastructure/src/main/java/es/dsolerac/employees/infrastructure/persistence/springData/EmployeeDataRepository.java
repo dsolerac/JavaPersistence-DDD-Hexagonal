@@ -26,7 +26,17 @@ public interface EmployeeDataRepository<T, ID> extends JpaRepository<Employee, I
     @Query("SELECT COUNT (e) FROM employees e WHERE e.birthDate > :localDate")
     public List<Employee> countByBirthDateAfter(@Param("localDate") LocalDate localDate);
 
-//    public long countByGender(@Param("gender") Gender gender);
+
+
+
+
+
+
+
+
+
+
+
 
 //    public long countByGender(@Param("gender") Gender gender)
 //    {

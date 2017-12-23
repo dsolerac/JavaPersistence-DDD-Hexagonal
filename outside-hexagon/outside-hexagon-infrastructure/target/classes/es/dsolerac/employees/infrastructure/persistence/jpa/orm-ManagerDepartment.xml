@@ -17,8 +17,14 @@
 
     <embeddable  class="es.dsolerac.employees.domain.employee.entities.composedIds.ManagerDepartmentID" access="FIELD">
         <attributes>
-            <many-to-one name="employee" fetch="LAZY"><join-column name="emp_no" referenced-column-name="emp_no" /></many-to-one>
-            <many-to-one name="department"><join-column name="dept_no" referenced-column-name="dept_no"/></many-to-one>
+            <many-to-one name="employee" fetch="LAZY">
+                <join-column name="emp_no" referenced-column-name="emp_no"  />
+                <cascade><cascade-all/></cascade>
+            </many-to-one>
+            <many-to-one name="department" fetch="LAZY">
+                <join-column name="dept_no" referenced-column-name="dept_no" />
+                <cascade><cascade-all/></cascade>
+            </many-to-one>
         </attributes>
         <description></description>
     </embeddable>

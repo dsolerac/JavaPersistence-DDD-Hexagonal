@@ -30,10 +30,12 @@
             <basic name="hireDate"><column name="hire_date"/></basic>
 
             <one-to-many name="salaries" mapped-by="employee">
+                <cascade><cascade-all/></cascade>
                 <order-by/>
             </one-to-many>
 
             <one-to-many name="titles" mapped-by="employee">
+                <cascade><cascade-all/></cascade>
                 <order-by/>
             </one-to-many>
 
@@ -62,11 +64,25 @@
                 </join-table>
             </many-to-many>-->
 
+<!--            <one-to-many name="employeeDepartments" target-entity="es.dsolerac.employees.domain.employee.entities.EmployeeDepartment" fetch="LAZY" orphan-removal="true"  >
+                <join-column name="emp_no" referenced-column-name="emp_no" />
+                 <cascade><cascade-all/></cascade>
+                <order-by/>
+            </one-to-many>-
+            <one-to-many name="managerDepartments" target-entity="es.dsolerac.employees.domain.employee.entities.ManagerDepartment" fetch="LAZY"  orphan-removal="true" >
+                <join-column name="emp_no" referenced-column-name="emp_no" />
+                 <cascade><cascade-all/></cascade>
+                <order-by/>
+            </one-to-many>
+
+-->
+
+
             <one-to-many name="employeeDepartments" mapped-by="employeeDepartmentID.employee" fetch="LAZY" >
                 <cascade><cascade-all/></cascade>
                 <order-by/>
             </one-to-many>
-            <one-to-many name="managerDepartments" mapped-by="employeeDepartmentID.employee" fetch="LAZY" >
+            <one-to-many name="managerDepartments" mapped-by="managerDepartmentID.employee" fetch="LAZY" >
                 <cascade><cascade-all/></cascade>
                 <order-by/>
             </one-to-many>

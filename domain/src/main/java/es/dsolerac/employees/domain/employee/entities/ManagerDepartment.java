@@ -23,8 +23,6 @@ public class ManagerDepartment {
         return managerDepartmentID;
     }
 
-
-
     public LocalDate getFromDate() {
         return fromDate;
     }
@@ -71,10 +69,10 @@ public class ManagerDepartment {
 
     @Override
     public String toString() {
-        return "EmployeeDepartment{" +
+        return "ManagerDepartment{" +
                 "fromDate=" + fromDate +
                 ", toDate=" + toDate +
-                ", employeeDepartmentID=" + managerDepartmentID +
+                ", managerDepartmentID=" + managerDepartmentID +
                 '}';
     }
 }
