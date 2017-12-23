@@ -15,16 +15,16 @@ import java.util.List;
  *
  * Created by dsolerac on 10/11/17.
  */
-public interface EmployeeRepository<Employee, Integer>  {
+public interface EmployeeRepository<T, ID> extends CrudRepository<T, ID> {
 
 
-    public List<Employee> findByfirstNameLike(String firstName);
+    public List<T> findByfirstNameLike(String firstName);
 
-    public List<Employee> findByBirthDateAfter(LocalDate localDate);
+    public List<T> findByBirthDateAfter(LocalDate localDate);
 
-    public List<Employee> countByBirthDateAfter(LocalDate localDate);
+    public List<T> countByBirthDateAfter(LocalDate localDate);
 
-    public long countByGender(Gender gender);
+    public long countEmployeesByGender(Gender gender);
 
 
 

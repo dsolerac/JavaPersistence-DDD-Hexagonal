@@ -22,6 +22,7 @@ import javax.persistence.metamodel.EntityType;
 import javax.persistence.metamodel.Metamodel;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Esta es la implementación del repositorio definido en el dominio.
@@ -32,7 +33,7 @@ import java.util.List;
  */
 @Repository
 @Transactional
-public class EmployeeRepositoryImpl implements  EmployeeRepository<Employee, Integer>  {
+public class EmployeeRepositoryImpl implements EmployeeRepository<Employee, Integer>  {
 
 
     @Autowired
@@ -61,6 +62,11 @@ public class EmployeeRepositoryImpl implements  EmployeeRepository<Employee, Int
     }
 
     @Override
+    public long countEmployeesByGender(Gender gender) {
+        return repository.countEmployeesByGender(gender);
+    }
+
+
     public long countByGender(Gender gender) {
 
         System.out.println("###### ini ######## JQL");
@@ -107,4 +113,63 @@ public class EmployeeRepositoryImpl implements  EmployeeRepository<Employee, Int
 
 
 
+
+
+
+
+
+    @Override
+    public <S extends Employee> S save(S var1) {
+        return (S) repository.save(var1);
+    }
+
+    @Override
+    public <S extends Employee> Iterable<S> saveAll(Iterable<S> var1) {
+        return repository.saveAll(var1);
+    }
+
+    @Override
+    public Optional<Employee> findById(Integer var1) {
+        return repository.findById(var1);
+    }
+
+    @Override
+    public boolean existsById(Integer var1) {
+        return repository.existsById(var1);
+    }
+
+    @Override
+    public Iterable<Employee> findAll() {
+        return repository.findAll();
+    }
+
+    @Override
+    public Iterable<Employee> findAllById(Iterable<Integer> var1) {
+        return repository.findAllById(var1);
+    }
+
+    @Override
+    public long count() {
+        return repository.count();
+    }
+
+    @Override
+    public void deleteById(Integer var1) {
+        repository.deleteById(var1);
+    }
+
+    @Override
+    public void delete(Employee var1) {
+        repository.delete(var1);
+    }
+
+    @Override
+    public void deleteAll(Iterable<? extends Employee> var1) {
+        repository.deleteAll(var1);
+    }
+
+    @Override
+    public void deleteAll() {
+        repository.deleteAll();
+    }
 }

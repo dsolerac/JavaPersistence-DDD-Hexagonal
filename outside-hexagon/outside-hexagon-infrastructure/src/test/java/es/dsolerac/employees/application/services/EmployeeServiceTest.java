@@ -4,6 +4,7 @@ package es.dsolerac.employees.application.services;
 import es.dsolerac.employees.domain.employee.entities.*;
 import es.dsolerac.employees.domain.employee.entities.composedIds.EmployeeDepartmentID;
 import es.dsolerac.employees.domain.employee.entities.composedIds.TitleID;
+import es.dsolerac.employees.domain.employee.repository.EmployeeRepository;
 import es.dsolerac.employees.infrastructure.persistence.springData.DepartmentDataRepository;
 import es.dsolerac.employees.infrastructure.persistence.springData.EmployeeDataRepository;
 import es.dsolerac.employees.infrastructure.spring.config.EmployeeConfig;
@@ -13,6 +14,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -32,11 +34,16 @@ import java.util.Optional;
 @Transactional
 public class EmployeeServiceTest {
 
-    @Autowired
-    EmployeeDataRepository employeeRepository;
+/*    @Autowired
+    EmployeeDataRepository employeeRepository;*/
 
     @Autowired
     DepartmentDataRepository departmentRepository;
+
+
+    @Qualifier("employeeRepositoryImpl")
+    @Autowired
+    EmployeeRepository employeeRepository;
 
     @Before
     public void setUp() throws Exception {
@@ -54,7 +61,7 @@ public class EmployeeServiceTest {
 
     @Test
     public void countByGender() {
-        System.out.println("#### 6 -->" + employeeRepository.countByGender(Gender.F));
+        System.out.println("#### 6 -->" + employeeRepository.countEmployeesByGender(Gender.F));
     }
 
     @Test
