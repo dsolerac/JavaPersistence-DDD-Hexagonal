@@ -6,6 +6,8 @@ import es.dsolerac.employees.domain.employee.entities.Gender;
 import es.dsolerac.employees.domain.employee.entities.QEmployee;
 import es.dsolerac.employees.domain.employee.repository.CrudRepository;
 import es.dsolerac.employees.domain.employee.repository.EmployeeRepository;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.NoRepositoryBean;
@@ -42,6 +44,8 @@ import java.util.List;
  */
 @Transactional
 public interface EmployeeDataRepository<T, ID> extends JpaRepository<Employee, Integer>, EmployeeRepository<Employee, Integer> {
+
+    Logger LOG = LogManager.getLogger(EmployeeDataRepository.class);
 
 
     @Query("SELECT COUNT (e) FROM employees e WHERE e.birthDate > :localDate")

@@ -29,9 +29,7 @@ import javax.sql.DataSource;
 @Configuration
 @EnableTransactionManagement
 @PropertySource({ "classpath:jdbc.properties" })
-@EnableJpaRepositories( basePackages = "es.dsolerac.employees.infrastructure.persistence.springData.impl"
-                      //  , repositoryBaseClass= BaseRepositoryImpl.class
-                      )
+@EnableJpaRepositories( basePackages = "es.dsolerac.employees.infrastructure.persistence.springData.impl")
 public class PersistenceConfig {
 
     private static final Logger LOG = LogManager.getLogger(PersistenceConfig.class);
@@ -99,7 +97,7 @@ public class PersistenceConfig {
 
     }
 
-    @Bean("transactionManager")
+    @Bean(name = BeanNames.infrastructure.transactionManager)
     public JpaTransactionManager jpaTransactionManager (){
 
         JpaTransactionManager jpaTransactionManager = new JpaTransactionManager();

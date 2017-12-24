@@ -1,8 +1,9 @@
 package es.dsolerac.employees.infrastructure.persistence.springData;
 
 import es.dsolerac.employees.domain.employee.repository.CrudRepository;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.NoRepositoryBean;
 
 import java.util.Optional;
 
@@ -13,8 +14,9 @@ import java.util.Optional;
  *
  * Created by dsolerac on 23/12/17.
  */
-@NoRepositoryBean
 public class BaseRepositoryImpl<T, ID> implements CrudRepository<T, ID>  {
+
+    private static final Logger LOG = LogManager.getLogger(BaseRepositoryImpl.class);
 
     private JpaRepository repository;
 

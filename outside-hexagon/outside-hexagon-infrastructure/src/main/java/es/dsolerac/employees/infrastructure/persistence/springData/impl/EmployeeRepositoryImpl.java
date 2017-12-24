@@ -1,11 +1,11 @@
 package es.dsolerac.employees.infrastructure.persistence.springData.impl;
 
 
-import com.querydsl.jpa.impl.JPAQueryFactory;
 import es.dsolerac.employees.domain.employee.entities.Gender;
-import es.dsolerac.employees.domain.employee.entities.QEmployee;
 import es.dsolerac.employees.domain.employee.repository.EmployeeRepository;
 import es.dsolerac.employees.infrastructure.persistence.springData.BaseRepositoryImpl;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -28,6 +28,9 @@ import java.util.List;
 @Transactional
 public class EmployeeRepositoryImpl<Employee, Integer> extends BaseRepositoryImpl<Employee, Integer> implements EmployeeRepository<Employee, Integer>  {
 
+    private static final Logger LOG = LogManager.getLogger(EmployeeRepositoryImpl.class);
+
+
     private EmployeeDataRepository repository;
 
     @PersistenceUnit
@@ -39,8 +42,6 @@ public class EmployeeRepositoryImpl<Employee, Integer> extends BaseRepositoryImp
     public EmployeeRepositoryImpl(EmployeeDataRepository repository) {
         super((JpaRepository) repository);
         this.repository=repository;
-
-        System.out.println("##################  ENTRA !!!!");
     }
 
 

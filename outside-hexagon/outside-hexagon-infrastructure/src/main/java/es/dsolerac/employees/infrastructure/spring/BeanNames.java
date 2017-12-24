@@ -25,17 +25,19 @@ public interface BeanNames {
     public interface infrastructure {
 
         final String dataSource = "dataSource";
+        final String transactionManager = "transactionManager";
 
         public interface repositories {
 
-            //********
-            //SE INJECTAN POR MEDIO DE @ComponentScan({ "es.dsolerac.pfg.infrastructure.persistence.hibernate.persistence" })
-//            final String userRepository = "userRepository";
+            final String employeeRepository = "employeeRepository";
+            final String departmentRepository = "departmentRepository";
 
-//            final String inMemoryUserRepository = "inMemoryUserRepository";
-//            final String hibernateUserRepository = "hibernateUserRepository";
-            final String employeeDataRepository = "employeeDataRepository";
+            public interface springDataJpaRepositories{
 
+                final String employeeDataRepository = "employeeDataRepository";
+                final String departmentDataRepository = "departmentDataRepository";
+
+            }
 
         }
 
@@ -52,13 +54,6 @@ public interface BeanNames {
 
         }
 
-
-        public interface hiberante {
-
-            final String sessionFactory = "sessionFactory";
-            final String transactionManager = "transactionManager";
-
-        }
 
     }
 

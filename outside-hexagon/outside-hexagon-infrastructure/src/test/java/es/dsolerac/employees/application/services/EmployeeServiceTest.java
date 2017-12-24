@@ -3,9 +3,14 @@ package es.dsolerac.employees.application.services;
 
 import es.dsolerac.employees.domain.employee.entities.*;
 import es.dsolerac.employees.domain.employee.entities.composedIds.TitleID;
+import es.dsolerac.employees.domain.employee.repository.DepartmentRepository;
 import es.dsolerac.employees.domain.employee.repository.EmployeeRepository;
+import es.dsolerac.employees.infrastructure.persistence.springData.BaseRepositoryImpl;
 import es.dsolerac.employees.infrastructure.persistence.springData.impl.DepartmentDataRepository;
+import es.dsolerac.employees.infrastructure.spring.BeanNames;
 import es.dsolerac.employees.infrastructure.spring.config.EmployeeConfig;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -31,16 +36,15 @@ import java.util.Optional;
 @Transactional
 public class EmployeeServiceTest {
 
-/*    @Autowired
-    EmployeeDataRepository employeeRepository;*/
+    private static final Logger LOG = LogManager.getLogger(EmployeeServiceTest.class);
 
-    @Qualifier("departmentDataRepository")
+
+    @Qualifier(BeanNames.infrastructure.repositories.departmentRepository)
     @Autowired
-    DepartmentDataRepository departmentRepository;
+    DepartmentRepository departmentRepository;
 
 
-//    @Qualifier("employeeRepositoryImpl")
-    @Qualifier("EmployeeRepository")
+    @Qualifier(BeanNames.infrastructure.repositories.employeeRepository)
     @Autowired
     EmployeeRepository employeeRepository;
 
