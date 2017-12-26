@@ -1,7 +1,13 @@
+/home/dsolerac/Proyectos/Employees/domain/src/main/java/es/dsolerac/employees/domain/employee/entities/composedIds/ManagerDepartmentID.java
+/home/dsolerac/Proyectos/Employees/domain/src/main/java/es/dsolerac/employees/domain/employee/entities/ManagerDepartment.java
+/home/dsolerac/Proyectos/Employees/domain/src/main/java/es/dsolerac/employees/domain/employee/entities/EmployeeDepartment.java
 /home/dsolerac/Proyectos/Employees/domain/src/main/java/es/dsolerac/employees/domain/employee/entities/Employee.java
-/home/dsolerac/Proyectos/Employees/domain/src/main/java/es/dsolerac/employees/domain/employee/entities/Title.java
-/home/dsolerac/Proyectos/Employees/domain/src/main/java/es/dsolerac/employees/domain/employee/entities/Deparment.java
+/home/dsolerac/Proyectos/Employees/domain/src/main/java/es/dsolerac/employees/domain/employee/entities/composedIds/EmployeeDepartmentID.java
+/home/dsolerac/Proyectos/Employees/domain/src/main/java/es/dsolerac/employees/domain/employee/entities/composedIds/TitleID.java
+/home/dsolerac/Proyectos/Employees/domain/src/main/java/es/dsolerac/employees/domain/employee/repository/DepartmentRepository.java
 /home/dsolerac/Proyectos/Employees/domain/src/main/java/es/dsolerac/employees/domain/employee/entities/Gender.java
 /home/dsolerac/Proyectos/Employees/domain/src/main/java/es/dsolerac/employees/domain/employee/repository/EmployeeRepository.java
 /home/dsolerac/Proyectos/Employees/domain/src/main/java/es/dsolerac/employees/domain/employee/entities/Salary.java
 /home/dsolerac/Proyectos/Employees/domain/src/main/java/es/dsolerac/employees/domain/employee/repository/CrudRepository.java
+/home/dsolerac/Proyectos/Employees/domain/src/main/java/es/dsolerac/employees/domain/employee/entities/Title.java
+/home/dsolerac/Proyectos/Employees/domain/src/main/java/es/dsolerac/employees/domain/employee/entities/Department.java

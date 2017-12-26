@@ -1,5 +1,6 @@
 package es.dsolerac.employees.domain.employee.entities;
 
+import javax.validation.constraints.*;
 import java.util.List;
 
 /**
@@ -7,7 +8,11 @@ import java.util.List;
  */
 public class Department {
 
+//    @Max(4)
+    @Size(max = 4) @NotNull() //@Digits(integer = 55_000, fraction = 0)
     private String idDepartment;
+
+    @NotNull() @NotEmpty @Size(max = 40)
     private String name;
 
     private List<EmployeeDepartment> employeeDepartments;

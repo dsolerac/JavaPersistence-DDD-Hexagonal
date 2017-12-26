@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="es.dsolerac.employees.application.services.EmployeeServiceTest" time="1.164" tests="9" errors="0" skipped="0" failures="0">
+<testsuite name="es.dsolerac.employees.application.services.DepartmentServiceTest" time="0.035" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/jdk1.8.0/jre/lib/amd64"/>
@@ -59,13 +59,5 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="countByBirthDateAfter" classname="es.dsolerac.employees.application.services.EmployeeServiceTest" time="0.157"/>
-  <testcase name="findByBirthDateAfter" classname="es.dsolerac.employees.application.services.EmployeeServiceTest" time="0.242"/>
-  <testcase name="findByID" classname="es.dsolerac.employees.application.services.EmployeeServiceTest" time="0.019"/>
-  <testcase name="getEmployeeDepartments" classname="es.dsolerac.employees.application.services.EmployeeServiceTest" time="0.022"/>
-  <testcase name="countEmployees" classname="es.dsolerac.employees.application.services.EmployeeServiceTest" time="0.064"/>
-  <testcase name="countByGender" classname="es.dsolerac.employees.application.services.EmployeeServiceTest" time="0.105"/>
-  <testcase name="findByfirstNameLike" classname="es.dsolerac.employees.application.services.EmployeeServiceTest" time="0.364"/>
-  <testcase name="getManagerDepartments" classname="es.dsolerac.employees.application.services.EmployeeServiceTest" time="0.014"/>
-  <testcase name="saveEmployee" classname="es.dsolerac.employees.application.services.EmployeeServiceTest" time="0.177"/>
+  <testcase name="createNewDepartment" classname="es.dsolerac.employees.application.services.DepartmentServiceTest" time="0.035"/>
 </testsuite>

@@ -1,6 +1,7 @@
 package es.dsolerac.employees.infrastructure.persistence.springData.impl;
 
 
+import es.dsolerac.employees.domain.employee.entities.Employee;
 import es.dsolerac.employees.domain.employee.entities.Gender;
 import es.dsolerac.employees.domain.employee.repository.EmployeeRepository;
 import es.dsolerac.employees.infrastructure.persistence.springData.BaseRepositoryImpl;
@@ -26,7 +27,7 @@ import java.util.List;
  */
 @Repository
 @Transactional
-public class EmployeeRepositoryImpl<Employee, Integer> extends BaseRepositoryImpl<Employee, Integer> implements EmployeeRepository<Employee, Integer>  {
+public class EmployeeRepositoryImpl<T extends Employee, Integer> extends BaseRepositoryImpl<Employee, Integer> implements EmployeeRepository<Employee, Integer>  {
 
     private static final Logger LOG = LogManager.getLogger(EmployeeRepositoryImpl.class);
 

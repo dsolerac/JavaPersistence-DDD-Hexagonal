@@ -1,5 +1,6 @@
 package es.dsolerac.employees.domain.employee.repository;
 
+import es.dsolerac.employees.domain.employee.entities.Employee;
 import es.dsolerac.employees.domain.employee.entities.Gender;
 
 import java.time.LocalDate;
@@ -15,7 +16,7 @@ import java.util.List;
  *
  * Created by dsolerac on 10/11/17.
  */
-public interface EmployeeRepository<T, ID> extends CrudRepository<T, ID> {
+public interface EmployeeRepository<T extends Employee, Integer> extends CrudRepository<T, Integer> {
 
 
     public List<T> findByfirstNameLike(String firstName);

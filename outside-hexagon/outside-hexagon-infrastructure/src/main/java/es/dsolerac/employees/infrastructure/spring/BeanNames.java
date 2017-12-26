@@ -26,6 +26,7 @@ public interface BeanNames {
 
         final String dataSource = "dataSource";
         final String transactionManager = "transactionManager";
+        final String entityValidator = "validator";
 
         public interface repositories {
 

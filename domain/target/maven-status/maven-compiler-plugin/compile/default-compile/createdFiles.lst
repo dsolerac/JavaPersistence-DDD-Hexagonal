@@ -1,7 +1,13 @@
-es/dsolerac/employees/domain/employee/entities/Deparment.class
-es/dsolerac/employees/domain/employee/entities/Salary.class
+es/dsolerac/employees/domain/employee/entities/composedIds/EmployeeDepartmentID.class
 es/dsolerac/employees/domain/employee/entities/Gender.class
 es/dsolerac/employees/domain/employee/repository/EmployeeRepository.class
-es/dsolerac/employees/domain/employee/entities/Title.class
+es/dsolerac/employees/domain/employee/entities/Department.class
+es/dsolerac/employees/domain/employee/entities/composedIds/ManagerDepartmentID.class
 es/dsolerac/employees/domain/employee/entities/Employee.class
 es/dsolerac/employees/domain/employee/repository/CrudRepository.class
+es/dsolerac/employees/domain/employee/entities/Salary.class
+es/dsolerac/employees/domain/employee/repository/DepartmentRepository.class
+es/dsolerac/employees/domain/employee/entities/composedIds/TitleID.class
+es/dsolerac/employees/domain/employee/entities/EmployeeDepartment.class
+es/dsolerac/employees/domain/employee/entities/Title.class
+es/dsolerac/employees/domain/employee/entities/ManagerDepartment.class

@@ -20,7 +20,7 @@ import org.springframework.context.annotation.Import;
  */
 @Configuration
 //@ComponentScan({"es.dsolerac.employees.infrastructure.persistence.springData"})
-@Import({PersistenceConfig.class})
+@Import({PersistenceConfig.class, ValidationConfig.class})
 public class EmployeeConfig {
 
     private static final Logger LOG = LogManager.getLogger(EmployeeConfig.class);

@@ -28,17 +28,6 @@
             <!--<many-to-many name="employees" mapped-by="deparments"/>-->
 
 
-<!--            <one-to-many name="employeeDepartments" target-entity="es.dsolerac.employees.domain.employee.entities.EmployeeDepartment" fetch="LAZY"  orphan-removal="true" >
-                <join-column name="dept_no" referenced-column-name="dept_no" ></join-column>
-                <cascade><cascade-all/></cascade>
-                <order-by/>
-            </one-to-many>
-            <one-to-many name="managerDepartments" target-entity="es.dsolerac.employees.domain.employee.entities.ManagerDepartment" fetch="LAZY"  orphan-removal="true" >
-                <join-column name="dept_no" referenced-column-name="dept_no" ></join-column>
-                <cascade><cascade-all/></cascade>
-                <order-by/>
-            </one-to-many>-->
-
             <one-to-many name="employeeDepartments" mapped-by="employeeDepartmentID.department" fetch="LAZY" >
                 <cascade><cascade-all/></cascade>
                 <order-by/>
