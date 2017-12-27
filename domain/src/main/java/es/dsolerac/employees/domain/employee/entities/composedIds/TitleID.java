@@ -1,5 +1,6 @@
 package es.dsolerac.employees.domain.employee.entities.composedIds;
 
+import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -8,7 +9,9 @@ import java.time.LocalDate;
  */
 public class TitleID implements Serializable {
 
+    @PastOrPresent
     private LocalDate fromDate;
+    @Size(max = 50) @NotBlank
     private String title;
 
     public TitleID() {

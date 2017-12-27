@@ -2,6 +2,10 @@ package es.dsolerac.employees.domain.employee.entities;
 
 import es.dsolerac.employees.domain.employee.entities.composedIds.TitleID;
 
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Null;
 import java.time.LocalDate;
 
 /**
@@ -9,11 +13,10 @@ import java.time.LocalDate;
  */
 public class Title {
 
+    @NotNull
     private Employee employee;
-
     private TitleID titleID;
-//    private String title;
-//    private LocalDate fromDate;
+
     private LocalDate toDate;
 
 
@@ -33,22 +36,6 @@ public class Title {
     public void setTitleID(TitleID titleID) {
         this.titleID = titleID;
     }
-
-    //    public String getTitle() {
-//        return title;
-//    }
-//
-//    public void setTitle(String title) {
-//        this.title = title;
-//    }
-//
-//    public LocalDate getFromDate() {
-//        return fromDate;
-//    }
-//
-//    public void setFromDate(LocalDate fromDate) {
-//        this.fromDate = fromDate;
-//    }
 
     public LocalDate getToDate() {
         return toDate;

@@ -1,5 +1,6 @@
 package es.dsolerac.employees.domain.employee.entities;
 
+import javax.validation.constraints.*;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -8,15 +9,19 @@ import java.util.List;
  */
 public class Employee {
 
+    @Positive
     private int idEmployee;
-
+    @PastOrPresent
     private LocalDate birthDate;
+    @Size(max = 14)@NotBlank
     private String firstName;
+    @Size(max = 16)@NotBlank
     private String lastName;
     private Gender gender;
+    @PastOrPresent
     private LocalDate hireDate;
 
-    private List<Salary> salaries;
+    private List< Salary> salaries;
     private List<Title> titles;
 
     private List<EmployeeDepartment> employeeDepartments;

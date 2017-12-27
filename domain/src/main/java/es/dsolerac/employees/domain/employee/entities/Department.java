@@ -8,14 +8,13 @@ import java.util.List;
  */
 public class Department {
 
-//    @Max(4)
-    @Size(max = 4) @NotNull() //@Digits(integer = 55_000, fraction = 0)
+    @Size(max = 4, min = 4) @NotNull()
     private String idDepartment;
 
     @NotNull() @NotEmpty @Size(max = 40)
     private String name;
 
-    private List<EmployeeDepartment> employeeDepartments;
+    private List<@NotEmpty  EmployeeDepartment> employeeDepartments;
     private List<ManagerDepartment> managerDepartments;
 
 
@@ -60,4 +59,5 @@ public class Department {
                 ", name='" + name + '\'' +
                 '}';
     }
+
 }

@@ -1,5 +1,9 @@
 package es.dsolerac.employees.domain.employee.entities;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
+import javax.validation.constraints.PastOrPresent;
+import javax.validation.constraints.Positive;
 import java.time.LocalDate;
 
 /**
@@ -7,9 +11,12 @@ import java.time.LocalDate;
  */
 public class Salary {
 
+    @NotNull
     private Employee employee;
 
+    @PastOrPresent
     private LocalDate fromDate;
+    @Positive
     private int salary;
     private LocalDate toDate;
 
